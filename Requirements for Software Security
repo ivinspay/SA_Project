@@ -28,11 +28,12 @@ Personal Reflection:
 
 2) Use Case - Authenicate User
 
-image:
+image: 
 
 Actors:
 *Zulip User (user)
 *Credential theft (misuser)
+*Organization/Admin
 
 Description of Use Case:
 *The authenticated user allows the actual Zulip user to prove their identity before accessing Zulip organization information. 
@@ -50,9 +51,9 @@ Security Requirements:
 
 Personal Reflection: 
 
-3) 
-4) 
-5) 
+3) Phishing
+4) Software issues
+5) Account issues
 
 Overall Reflection:
 
