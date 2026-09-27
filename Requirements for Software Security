@@ -2,14 +2,14 @@ Requirements for Software Security Engineering
 
 1) Use Case - Admin Manges users' permissions and access 
 
-image: 
+
 
 Actors: 
 *Authorized Administrator (User)
-*Ex-employees, Prvilige seeking external actor (misuer)
+*Ex-employees, Privilige seeking external actor (misuer)
 
 Description of Use Case:
-*The user (an organization adminitsrator) manages team members permissions and access on Zulip. 
+*The user (an organization administrator) manages team members permissions and access on Zulip. 
 The admin user roles, adds, or removes users from groups, and deactivates or reactviattes accounts as needed. 
 These features help the organization control who can access their team commmunications channels and what actions they can perform. 
 
