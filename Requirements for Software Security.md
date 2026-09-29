@@ -5,6 +5,7 @@
 image: ![Admin manges permissions and access Use/Misuse Case Diagram](images/sullivan_usecase.png)
 
 **Actors:**
+
 * Authorized Administrator (User)
 * Ex-employees, Privilige seeking external actor (misuer)
 
@@ -15,6 +16,7 @@ The admin user roles, adds, or removes users from groups, and deactivates or rea
 These features help the organization control who can access their teams commmunication channels and what actions they can perform. 
 
 **Description of Misuse Case:**
+
 A hacker steals team members credentials to attempt unauthorized actions in Zulip, such as gaining admin priviliges, 
 changing group membership, or deactivating and reactiviating accounts. A terminated or disgruntled employees may also attempt to reuse existing sessions or credentials after they have been deactivated.
 
@@ -31,6 +33,7 @@ changing group membership, or deactivating and reactiviating accounts. A termina
 **SR5:** Enforce group member permissions.
 
 **Reflection:**
+
 Zulip’s advertised security features support the security requirements. However, the strength of the alignment varies. It implements a user-update API which enforces RBAC to restrict changes to admins and owners addressing the privilege escalation scenario. Zulip let organizations control who can add, remove, join, or leave groups supporting the group membership permission requirement. One issue with this is that this permission can be given too broadly, allowing unwanted membership changes. Zulips deactivation features meet the requirement to restrict account management to admins and block access after account has been deactivated.  A reactivated account keeps its previous permissions and API key making usable if stolen under the right conditions. Zulip advertises permanent long-term audit logs for important actions satisfying the requirement of log and audit account activity, but the documentation does not show if these logs can be altered themselves. Overall these features provide decent protection, but it will be difficult to prevent someone who already has elevated permissions from misusing the system.
 
 
@@ -39,15 +42,18 @@ Zulip’s advertised security features support the security requirements. Howeve
 image: 
 
 **Actors:**
+
 * Zulip User (user)
 * Credential theft (misuser)
 * Organization/Admin
 
 **Description of Use Case:**
+
 The authenticated user allows the actual Zulip user to prove their identity before accessing Zulip organization information. 
 The user has to submit authentication information that has to be monitored and approved; Zulip has to be validated and successful authenication results in a completed authentication session in the system. 
 
 **Description of Mis Use Case:**
+
 *Here the crdential theft obtains authentication through whatver gained, and then can use crdentials that have been compromised to gain access to insider information.
 
 **Security Requirements:**
@@ -67,14 +73,17 @@ The user has to submit authentication information that has to be monitored and a
 image: ![Notifications Use/Misuse Case Diagram](images/NotificationUseCase.png)
 
 **Actors:**
+
 * Zulip User (user), Zulip mobile app, Zulip server/mobile push notification service
 * User with access to a compromised server (misuser)
 
 **Description of Use Case:**
+
 A user wants to be notified on their phone appropriately whenever they are tagged or miss a message in their Zulip server. The user expects this notification to be coming from a trusted source and with reliable intel.
 If the user is receiving a private message, they expect that it is only sent to them and no one else can access the contents.
 
 **Description of Misuse Case:**
+
 A malicious user wants to send malicious or fake notifications to users to get a user to click on a malicious link or spam a legitimate user with unwanted notifications.
 Doing this would cause unwanted resource usage for the user's mobile device or if enough messages are sent a Denial of Service attack. 
 This could also allow access to the user's account or server depending on the link the malicious user is trying to get the legitimate user to click.
@@ -112,6 +121,7 @@ Personal Reflection:
 **SR20:** Zulip should allow authorized administrators to audit messages sent (for example: by sender, recipient, keyword, and time) to investigate data exfiltration through messages.
 
 **Reflection:**
+
 The misuse case analysis produced 5 security requirements targeting a malicious insider exfiltrating data through sending messages and attachments on Zulip. After reviewing Zulip’s documentation, we found 
 that Zulip’s advertised features are strongest in access controls. For example, file access is checked per request against who actually received it and admins can restrict who creates or posts 
 in channels and who can send direct messages. Zulip does have room for improvement on the auditing side of things, we couldn’t find anything in the documentation about logging file downloads 
@@ -119,10 +129,15 @@ that would let organizations investigate a suspected leak after the fact, and au
 Zulip's security features are sufficient against outsider threats but could improve on their action against insider threats, where prevention alone can't stop someone from misusing access 
 they're already entitled to have, and better logging/audit capability would be the most impactful improvement.
 
+**Personal Reflection:**
+
+I thought writing security requirements would be pretty simple, but it turned out to be a lot harder to make them specific enough to actually be useful against real documentation. My original drafts sounded fine on the surface but honestly were too vague, and I had to keep revising until they actually said something worthwhile. The most useful part was going back and forth between use cases and misuse cases until we found a real gap in coverage it showed me that security isn't really a clean "yes" or "no" answer.
+
 
 ## 5) Account issues
 
-## Overall Reflection of Team:
+**Overall Reflection of Team:**
+
 What did you learn from this assignment? What did you find most useful?
 Compile individual team member reflections into a single reflection for the team. 
 
@@ -131,6 +146,7 @@ Compile individual team member reflections into a single reflection for the team
 Improvements or missing features
 
 **Documentation Review:**
+
 One area that could be improved is Zulip’s security setup. The steps to needed to properly set up a Zulip server are spread across several separate pages rather than placed into a single checklist. One can 
 find security recommendations or tips in the [installation](https://zulip.readthedocs.io/en/stable/production/install.html), [reverse proxies](https://zulip.readthedocs.io/en/stable/production/reverse-proxies.html), and [monitoring](https://zulip.readthedocs.io/en/stable/production/troubleshooting.html) pages (plus several more). This is a problem because some who wants to start their own Zulip server, could finish 
 running the main install script, see the that the installation was complete, and assume they are done without realizing that there are still security recommendations that they still need to set up on other pages.
