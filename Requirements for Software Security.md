@@ -50,7 +50,7 @@ Security Requirements:
 3) Phishing
 4) Software issues
 
-image: ![descriptive alt text](path/to/image.png)
+image: ![Use-Misuse Diagram](images/UseCaseDiagramTamir.drawio.png)
 
 **Security Requirements:**
 
