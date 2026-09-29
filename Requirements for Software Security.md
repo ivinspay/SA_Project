@@ -1,6 +1,6 @@
 Part 1: Requirements for Software Security Engineering 
 
-1) Use Case - Admin Manges users' permissions and access 
+1) Use Case - Admin Manages users' permissions and access 
 
 image: 
 
@@ -38,7 +38,7 @@ Description of Use Case:
 The user has to submit authentication information that has to be monitored and approved; Zulip has to be validated and successful authenication results in a completed authentication session in the system. 
 
 Description of Mis Use Case:
-*Here the crdential theft obtains authentication through whatver gained, and then can use crdentials that have been compromised to gain access to insider information.
+*Here the credential theft obtains authentication through whatver gained, and then can use crdentials that have been compromised to gain access to insider information.
 
 Security Requirements:
 *SR6: Zulip needs to limit repeated failed authenticated requests to reduce password guessing type of attacks.
@@ -58,7 +58,7 @@ Compile individual team member reflections into a single reflection for the team
 Part 2: OSS Project Documentation Review
 
 Improvements or missing features
-
+The Zulip documentation here is clearly provided by security-related steps and installation information. The requirements focused on admin access, authenticate users, phishing, software issues, and account issues. The areas for improvement would be the protection of credentials. The security instructions are more broad then detailed, but does not address next steps if any of these occur within an organization. 
 
 
 
