@@ -24,8 +24,6 @@ Security Requirements:
 *SR4: Restrict role changes by accounts without administartor priviliges.
 *SR5: Enforce group member permissions.
 
-Personal Reflection:
-
 2) Use Case - Authenicate User
 
 image: 
@@ -49,13 +47,20 @@ Security Requirements:
 *SR9: Zulip now limits password reset to not abuse the password recovery mechanism intended for its actual use.
 *SR10: Zulip has to allow authorized adminsitrators to configure certain authentication methods for its users. 
 
-Personal Reflection: 
-
 3) Phishing
 4) Software issues 
 5) Account issues
 
-Overall Reflection:
+Overall Reflection of Team: 
+What did you learn from this assignment? What did you find most useful?
+Compile individual team member reflections into a single reflection for the team. 
+Michael - 
+Payten -  
+Tamir - 
+Kauser - 
+Tyler - 
+
+
 
 
 
