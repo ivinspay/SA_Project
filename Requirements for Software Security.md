@@ -1,8 +1,8 @@
 # Part 1: Requirements for Software Security Engineering 
 
-## 1) Use Case - Admin Manges users' permissions and access 
+## 1) Use Case - Admin Manges Users' Permissions and Access 
 
-image: 
+image: ![Admin manges permissions and access Use/Misuse Case Diagram](images/sullivan_usecase.png)
 
 **Actors:**
 * Authorized Administrator (User)
@@ -29,6 +29,10 @@ changing group membership, or deactivating and reactiviating accounts. A ternina
 **SR4:** Restrict role changes by accounts without administartor priviliges.
 
 **SR5:** Enforce group member permissions.
+
+**Reflection:**
+Zulip’s advertised security features support the security requirements. However, the strength of the alignment varies. It implements a user-update API which enforces RBAC to restrict changes to admins and owners addressing the privilege escalation scenario. Zulip let organizations control who can add, remove, join, or leave groups supporting the group membership permission requirement. One issue with this is that this permission can be given too broadly, allowing unwanted membership changes. Zulips deactivation features meet the requirement to restrict account management to admins and block access after account has been deactivated.  A reactivated account keeps its previous permissions and API key making usable if stolen under the right conditions. Zulip advertises permanent long-term audit logs for important actions satisfying the requirement of log and audit account activity, but the documentation does not show if these logs can be altered themselves. Overall these features provide decent protection, but it will be difficult to prevent someone who already has elevated permissions from misusing the system.
+
 
 ## 2) Use Case - Authenicate User
 
