@@ -47,7 +47,32 @@ Security Requirements:
 *SR9: Zulip now limits password reset to not abuse the password recovery mechanism intended for its actual use.
 *SR10: Zulip has to allow authorized adminsitrators to configure certain authentication methods for its users. 
 
-3) Phishing
+3) Use Case - Mobile Push Notifications from a Malicious or Compromised Server
+
+image: ![Notifications Use/Misuse Case Diagram](images/NotificationsUseCaseDiagram.pdf)
+
+Actors:
+*Zulip User (user), Zulip mobile app, Zulip server/mobile push notification service
+*User with access to a compromised server (misuser)
+
+Description of Use Case:
+*A user wants to be notified on their phone appropriately whenever they are tagged or miss a message in their Zulip server. The user expects this notification to be coming from a trusted source and with reliable intel.
+If the user is receiving a private message, they expect that it is only sent to them and no one else can access the contents.
+
+Description of Misuse Case:
+*A malicious user wants to send malicious or fake notifications to users to get a user to click on a malicious link or spam a legitimate user with unwanted notifications.
+Doing this would cause unwanted resource usage for the user's mobile device or if enough messages are sent a Denial of Service attack. 
+This could also allow access to the user's account or server depending on the link the malicious user is trying to get the legitimate user to click.
+
+
+Security Requirements:
+*SR11: Zulip should enforce per-user and per-source rate limits to prevent spamming of notifications.
+*SR12: Zulip should send generic alerts so that the actual messages remain undisclosed and can only be seen in the app itself.
+*SR13: Zulip needs to authenticate the notification sender by requiring a server-to-push-service request to be signed/authenticated.
+*SR14: Users need to verify the senders and make sure they know what they are accessing when clicking on links.
+*SR15: Zulip does provide E2EE but there are limitations noted in their push notification services documentation.
+
+Personal Reflection:
 4) Software issues
 
 image: ![Use-Misuse Diagram](images/UseCaseDiagramTamir.drawio.png)
