@@ -11,12 +11,12 @@ image: ![Admin manges permissions and access Use/Misuse Case Diagram](images/sul
 **Description of Use Case:**
 
 The user (an organization administrator) manages team members permissions and access on Zulip. 
-The admin user roles, adds, or removes users from groups, and deactivates or reactviattes accounts as needed. 
-These features help the organization control who can access their team commmunications channels and what actions they can perform. 
+The admin user roles, adds, or removes users from groups, and deactivates or reactivates accounts as needed. 
+These features help the organization control who can access their teams commmunication channels and what actions they can perform. 
 
 **Description of Misuse Case:**
 A hacker steals team members credentials to attempt unauthorized actions in Zulip, such as gaining admin priviliges, 
-changing group membership, or deactivating and reactiviating accounts. A terninated or disgruntltes emplyees may also attempt to reuse existing sessions or credentials after they have ben deactivated.
+changing group membership, or deactivating and reactiviating accounts. A terminated or disgruntled employees may also attempt to reuse existing sessions or credentials after they have been deactivated.
 
 **Security Requirements:**
 
