@@ -62,7 +62,7 @@ The user has to submit authentication information that has to be monitored and a
 
 image: ![Notifications Use/Misuse Case Diagram](images/NotificationUseCase.png)
 
-Actors:
+**Actors:**
 * Zulip User (user), Zulip mobile app, Zulip server/mobile push notification service
 * User with access to a compromised server (misuser)
 
@@ -128,9 +128,9 @@ Improvements or missing features
 
 **Documentation Review:**
 One area that could be improved is Zulip’s security setup. The steps to needed to properly set up a Zulip server are spread across several separate pages rather than placed into a single checklist. One can 
-find security recommendations or tips in the installation, reverse proxies, and monitoring pages (plus several more). This is a problem because some who wants to start their own Zulip server, could finish 
+find security recommendations or tips in the [installation](https://zulip.readthedocs.io/en/stable/production/install.html), [reverse proxies](https://zulip.readthedocs.io/en/stable/production/reverse-proxies.html), and [monitoring](https://zulip.readthedocs.io/en/stable/production/troubleshooting.html) pages (plus several more). This is a problem because some who wants to start their own Zulip server, could finish 
 running the main install script, see the that the installation was complete, and assume they are done without realizing that there are still security recommendations that they still need to set up on other pages.
-Another gap is that some warnings don't explain the risk behind them. For example, the docs note that using a self-signed certificate “isn't suitable for production use”, but don't say what actually goes wrong 
+Another gap is that some warnings don't explain the risk behind them. For example, the docs note that using a self-signed certificate [“isn't suitable for production use”](https://zulip.readthedocs.io/en/latest/production/install.html), but don't say what actually goes wrong 
 if you use one anyway, which makes the warning easy to underestimate.
 
 
