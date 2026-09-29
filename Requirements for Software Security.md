@@ -2,7 +2,7 @@ Requirements for Software Security Engineering
 
 1) Use Case - Admin Manges users' permissions and access 
 
-
+image: 
 
 Actors: 
 *Authorized Administrator (User)
@@ -52,7 +52,7 @@ Security Requirements:
 Personal Reflection: 
 
 3) Phishing
-4) Software issues - Tamir
+4) Software issues 
 5) Account issues
 
 Overall Reflection:
