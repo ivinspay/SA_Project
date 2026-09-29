@@ -54,13 +54,17 @@ image: ![Use-Misuse Diagram](images/UseCaseDiagramTamir.drawio.png)
 
 **Security Requirements:**
 
-SR1: Zulip should enforce file permissions so that only the original owner of the file can control who can access the uploaded file; to limit exfiltrating data via attachments.
-SR2: Zulip should allow administrators to restrict which users can create and post in public streams; to limit sensitive messages from being exposed across the organization.
-SR3: Zulip should allow administrators to restrict which users can create and receive direct messages; to limit sensitive info being sent to users outside the organization.
-SR4: Zulip should implement log file downloads so administrators can investigate data exfiltration after the fact.
-SR5: Zulip should allow authorized administrators to audit messages sent (for example: by sender, recipient, keyword, and time) to investigate data exfiltration through messages.
+**SR1:** Zulip should enforce file permissions so that only the original owner of the file can control who can access the uploaded file; to limit exfiltrating data via attachments.
 
-Reflection:
+**SR2:** Zulip should allow administrators to restrict which users can create and post in public streams; to limit sensitive messages from being exposed across the organization.
+
+**SR3:** Zulip should allow administrators to restrict which users can create and receive direct messages; to limit sensitive info being sent to users outside the organization.
+
+**SR4:** Zulip should implement log file downloads so administrators can investigate data exfiltration after the fact.
+
+**SR5:** Zulip should allow authorized administrators to audit messages sent (for example: by sender, recipient, keyword, and time) to investigate data exfiltration through messages.
+
+**Reflection:**
 The misuse case analysis produced 5 security requirements targeting a malicious insider exfiltrating data through sending messages and attachments on Zulip. After reviewing Zulip’s documentation, we found 
 that Zulip’s advertised features are strongest in access controls. For example, file access is checked per request against who actually received it and admins can restrict who creates or posts 
 in channels and who can send direct messages. Zulip does have room for improvement on the auditing side of things, we couldn’t find anything in the documentation about logging file downloads 
@@ -68,7 +72,7 @@ that would let organizations investigate a suspected leak after the fact, and au
 Zulip's security features are sufficient against outsider threats but could improve on their action against insider threats, where prevention alone can't stop someone from misusing access 
 they're already entitled to have, and better logging/audit capability would be the most impactful improvement.
 
-Documentation Review:
+**Documentation Review:**
 One area that could be improved is Zulip’s security setup. The steps to needed to properly set up a Zulip server are spread across several separate pages rather than placed into a single checklist. One can 
 find security recommendations or tips in the installation, reverse proxies, and monitoring pages (plus several more). This is a problem because some who wants to start their own Zulip server, could finish 
 running the main install script, see the that the installation was complete, and assume they are done without realizing that there are still security recommendations that they still need to set up on other pages.
@@ -76,7 +80,7 @@ Another gap is that some warnings don't explain the risk behind them. For exampl
 if you use one anyway, which makes the warning easy to underestimate.
 6) Account issues
 
-Overall Reflection of Team: 
+Overall Reflection of Team:
 What did you learn from this assignment? What did you find most useful?
 Compile individual team member reflections into a single reflection for the team. 
 
