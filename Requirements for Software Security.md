@@ -60,7 +60,7 @@ The user has to submit authentication information that has to be monitored and a
 
 ## 3) Use Case - Mobile Push Notifications from a Malicious or Compromised Server
 
-image: ![Notifications Use/Misuse Case Diagram](images/NotificationsUseCaseDiagram.pdf)
+image: ![Notifications Use/Misuse Case Diagram](images/use_case_diagram.pdf)
 
 Actors:
 * Zulip User (user), Zulip mobile app, Zulip server/mobile push notification service
