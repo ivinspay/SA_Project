@@ -2,7 +2,7 @@ Requirements for Software Security Engineering
 
 1) Use Case - Admin Manges users' permissions and access 
 
-image: 
+image: https://github.com/ivinspay/SA_Project/blob/main/images/UseCaseDiagramTamir.drawio.png
 
 Actors: 
 *Authorized Administrator (User)
