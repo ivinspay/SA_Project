@@ -54,11 +54,7 @@ Security Requirements:
 Overall Reflection of Team: 
 What did you learn from this assignment? What did you find most useful?
 Compile individual team member reflections into a single reflection for the team. 
-Michael - 
-Payten -  
-Tamir - 
-Kauser - 
-Tyler - 
+
 
 
 
