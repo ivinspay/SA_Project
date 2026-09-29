@@ -28,7 +28,7 @@ Personal Reflection:
 
 2) Use Case - Authenicate User
 
-image: 
+image: https://github.com/ivinspay/SA_Project/blob/main/images/UseDiagramPayten.png#:~:text=UseDiagramPayten.-,png,-Project_SA.md
 
 Actors:
 *Zulip User (user)
