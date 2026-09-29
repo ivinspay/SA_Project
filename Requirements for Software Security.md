@@ -56,9 +56,9 @@ What did you learn from this assignment? What did you find most useful?
 Compile individual team member reflections into a single reflection for the team. 
 
 Part 2: OSS Project Documentation Review
-The purpose of this task is to review security-related documentation of the project and find ways to improve it. Open source projects are always looking for contributors for their documentation. It may also allow you to get to know the open source community and procedures to contribute.
 
 Improvements or missing features
+
 
 
 
