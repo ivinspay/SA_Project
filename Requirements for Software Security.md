@@ -31,14 +31,16 @@ changing group membership, or deactivating and reactiviating accounts. A termina
 **SR5:** Enforce group member permissions.
 
 **Reflection:**
+
 Zulip’s advertised security features support the security requirements. However, the strength of the alignment varies. It implements a user-update API which enforces RBAC to restrict changes to admins and owners addressing the privilege escalation scenario. Zulip let organizations control who can add, remove, join, or leave groups supporting the group membership permission requirement. One issue with this is that this permission can be given too broadly, allowing unwanted membership changes. Zulips deactivation features meet the requirement to restrict account management to admins and block access after account has been deactivated.  A reactivated account keeps its previous permissions and API key making usable if stolen under the right conditions. Zulip advertises permanent long-term audit logs for important actions satisfying the requirement of log and audit account activity, but the documentation does not show if these logs can be altered themselves. Overall these features provide decent protection, but it will be difficult to prevent someone who already has elevated permissions from misusing the system.
 
 
 ## 2) Use Case - Authenicate User
 
-image: !
+image: ![](images/UseDiagramPayten.png)
 
 **Actors:**
+
 * Zulip User (user)
 * Credential theft (misuser)
 * Organization/Admin
@@ -67,6 +69,7 @@ The user has to submit authentication information that has to be monitored and a
 image: ![Notifications Use/Misuse Case Diagram](images/NotificationUseCase.png)
 
 **Actors:**
+
 * Zulip User (user), Zulip mobile app, Zulip server/mobile push notification service
 * User with access to a compromised server (misuser)
 
@@ -80,7 +83,7 @@ Doing this would cause unwanted resource usage for the user's mobile device or i
 This could also allow access to the user's account or server depending on the link the malicious user is trying to get the legitimate user to click.
 
 
-Security Requirements:
+**Security Requirements:**
 
 **SR11:** Zulip should enforce per-user and per-source rate limits to prevent spamming of notifications.
 
@@ -92,7 +95,7 @@ Security Requirements:
 
 **SR15:** Zulip does provide E2EE but there are limitations noted in their push notification services documentation.
 
-Personal Reflection:
+**Personal Reflection:**
 
 
 ## 4) Software issues
@@ -119,40 +122,44 @@ that would let organizations investigate a suspected leak after the fact, and au
 Zulip's security features are sufficient against outsider threats but could improve on their action against insider threats, where prevention alone can't stop someone from misusing access 
 they're already entitled to have, and better logging/audit capability would be the most impactful improvement.
 
+**Personal Reflection:**
+
+I thought writing security requirements would be pretty simple, but it turned out to be a lot harder to make them specific enough to actually be useful against real documentation. My original drafts sounded fine on the surface but honestly were too vague, and I had to keep revising until they actually said something worthwhile. The most useful part was going back and forth between use cases and misuse cases until we found a real gap in coverage it showed me that security isn't really a clean "yes" or "no" answer.
 
 ## 5) Account issues
 
 image: ![<img width="1196" height="662" alt="diagram5 drawio" src="https://github.com/user-attachments/assets/aab71f63-9b0b-46aa-aa2c-f6d007c4cc52" />
 
 **Actors:**
+
 * Zulip User (user)
 * Malicious Zulip User with Standard Account Access (misuser)
 
 **Description of Use Case:**
+
 A Zulip user manages their personal profile information, such as their display name, profile picture, and other available profile fields. Zulip also allows organizations to configure restrictions on certain profile changes and can synchronize profile information through external identity systems such as LDAP/Active Directory.
 
 **Description of Misuse Case:**
+
 A malicious Zulip user with a legitimate standard account attempts to modify another user's profile information without authorization. The misuser's goal is to impersonate or misrepresent another organization member by changing information such as the user's display name, profile picture, or other profile fields. The attacker has normal authenticated Zulip access but is not authorized to modify the targeted user's profile.
 
 
 **Security Requirements:**
 
 **SR21:** Zulip should verify that a user is authorized to modify the specific profile associated with the account being changed.
+
 **SR22:** Zulip should prevent a user from modifying another user's personal profile information without appropriate authorization.
+
 **SR23:**  Zulip should allow organization/server administrators to restrict user changes to profile information when required by organizational policy. Zulip already provides configuration controls for disabling name and avatar changes.
+
 **SR24:** Zulip should validate profile-update requests so that unauthorized or malformed changes to personal profile information are rejected.
+
 **SR25:**: Zulip should maintain an auditable record of significant profile/account changes so that unauthorized modifications can be investigated after an incident.
 
 **Reflection:**
 
 The misuse case analysis produced five security requirements focused on preventing unauthorized changes to user profile information. After reviewing Zulip's documentation, we found that Zulip provides several controls that address these requirements. Organizations can restrict whether users are allowed to change certain profile information, including names and avatars, which can help prevent unauthorized or unwanted changes to user identities. Zulip can also synchronize profile information from external identity systems such as LDAP/Active Directory, allowing organizations to manage certain profile information through an existing identity system.
 However, there are still limitations to consider. Restricting profile changes helps prevent unauthorized modifications, but it does not necessarily prevent a user who already has legitimate access from intentionally providing misleading information when changes are allowed. External identity synchronization can also help maintain consistent profile information, but its effectiveness depends on how the organization configures and manages its identity provider. Overall, Zulip provides useful controls for restricting profile changes, but stronger auditing of profile changes would provide additional support for investigating unauthorized modifications after they occur.
- 
-
-
-
- 
-
 
 ## Overall Reflection of Team:
 What did you learn from this assignment? What did you find most useful?
