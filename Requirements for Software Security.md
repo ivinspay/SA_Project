@@ -30,10 +30,13 @@ changing group membership, or deactivating and reactiviating accounts. A termina
 
 **SR5:** Enforce group member permissions.
 
-**Reflection:**
+**Assessment:**
 
 Zulip’s advertised security features support the security requirements. However, the strength of the alignment varies. It implements a user-update API which enforces RBAC to restrict changes to admins and owners addressing the privilege escalation scenario. Zulip let organizations control who can add, remove, join, or leave groups supporting the group membership permission requirement. One issue with this is that this permission can be given too broadly, allowing unwanted membership changes. Zulips deactivation features meet the requirement to restrict account management to admins and block access after account has been deactivated.  A reactivated account keeps its previous permissions and API key making usable if stolen under the right conditions. Zulip advertises permanent long-term audit logs for important actions satisfying the requirement of log and audit account activity, but the documentation does not show if these logs can be altered themselves. Overall these features provide decent protection, but it will be difficult to prevent someone who already has elevated permissions from misusing the system.
 
+**Personal Reflection:**
+
+I learned more about identifying threats, understanding how vulnerabilities can be exploited, and finding ways to mitigate them. This assignment helped me think through possible attack pathways and how developers can address security issues before they become problems. I also took a deeper dive into how Zulip works and how its specific features address different security risk. At first, I found it difficult to think through how certain features may be exploited but it became clearer over the many iterations of my diagram. 
 
 ## 2) Use Case - Authenicate User
 
