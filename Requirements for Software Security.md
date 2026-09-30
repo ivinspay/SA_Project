@@ -49,11 +49,13 @@ image: ![](images/UseDiagramPayten.png)
 * Organization/Admin
 
 **Description of Use Case:**
+
 The authenticated user allows the actual Zulip user to prove their identity before accessing Zulip organization information. 
 The user has to submit authentication information that has to be monitored and approved; Zulip has to be validated and successful authenication results in a completed authentication session in the system. 
 
 **Description of Mis Use Case:**
-*Here the crdential theft obtains authentication through whatver gained, and then can use crdentials that have been compromised to gain access to insider information.
+
+Here the crdential theft obtains authentication through whatver gained, and then can use crdentials that have been compromised to gain access to insider information.
 
 **Security Requirements:**
 
@@ -77,10 +79,12 @@ image: ![Notifications Use/Misuse Case Diagram](images/NotificationUseCase.png)
 * User with access to a compromised server (misuser)
 
 **Description of Use Case:**
+
 A user wants to be notified on their phone appropriately whenever they are tagged or miss a message in their Zulip server. The user expects this notification to be coming from a trusted source and with reliable intel.
 If the user is receiving a private message, they expect that it is only sent to them and no one else can access the contents.
 
 **Description of Misuse Case:**
+
 A malicious user wants to send malicious or fake notifications to users to get a user to click on a malicious link or spam a legitimate user with unwanted notifications.
 Doing this would cause unwanted resource usage for the user's mobile device or if enough messages are sent a Denial of Service attack. 
 This could also allow access to the user's account or server depending on the link the malicious user is trying to get the legitimate user to click.
@@ -117,13 +121,9 @@ This could also allow access to the user's account or server depending on the li
 
 **SR20:** Zulip should allow authorized administrators to audit messages sent (for example: by sender, recipient, keyword, and time) to investigate data exfiltration through messages.
 
-**Reflection:**
-The misuse case analysis produced 5 security requirements targeting a malicious insider exfiltrating data through sending messages and attachments on Zulip. After reviewing Zulip’s documentation, we found 
-that Zulip’s advertised features are strongest in access controls. For example, file access is checked per request against who actually received it and admins can restrict who creates or posts 
-in channels and who can send direct messages. Zulip does have room for improvement on the auditing side of things, we couldn’t find anything in the documentation about logging file downloads 
-that would let organizations investigate a suspected leak after the fact, and audit tools like message export exist but require special authorization rather than being fully self-service. Overall, 
-Zulip's security features are sufficient against outsider threats but could improve on their action against insider threats, where prevention alone can't stop someone from misusing access 
-they're already entitled to have, and better logging/audit capability would be the most impactful improvement.
+**Assessment:**
+
+The misuse case analysis produced 5 security requirements targeting a malicious insider exfiltrating data through sending messages and attachments on Zulip. After reviewing Zulip’s documentation, we found that Zulip’s advertised features are strongest in access controls. For example, file access is checked per request against who actually received it and admins can restrict who creates or posts in channels and who can send direct messages. Zulip does have room for improvement on the auditing side of things, we couldn’t find anything in the documentation about logging file downloads that would let organizations investigate a suspected leak after the fact, and audit tools like message export exist but require special authorization rather than being fully self-service. Overall, Zulip's security features are sufficient against outsider threats but could improve on their action against insider threats, where prevention alone can't stop someone from misusing access they're already entitled to have, and better logging/audit capability would be the most impactful improvement.
 
 **Personal Reflection:**
 
@@ -161,8 +161,7 @@ A malicious Zulip user with a legitimate standard account attempts to modify ano
 
 **Reflection:**
 
-The misuse case analysis produced five security requirements focused on preventing unauthorized changes to user profile information. After reviewing Zulip's documentation, we found that Zulip provides several controls that address these requirements. Organizations can restrict whether users are allowed to change certain profile information, including names and avatars, which can help prevent unauthorized or unwanted changes to user identities. Zulip can also synchronize profile information from external identity systems such as LDAP/Active Directory, allowing organizations to manage certain profile information through an existing identity system.
-However, there are still limitations to consider. Restricting profile changes helps prevent unauthorized modifications, but it does not necessarily prevent a user who already has legitimate access from intentionally providing misleading information when changes are allowed. External identity synchronization can also help maintain consistent profile information, but its effectiveness depends on how the organization configures and manages its identity provider. Overall, Zulip provides useful controls for restricting profile changes, but stronger auditing of profile changes would provide additional support for investigating unauthorized modifications after they occur.
+The misuse case analysis produced five security requirements focused on preventing unauthorized changes to user profile information. After reviewing Zulip's documentation, we found that Zulip provides several controls that address these requirements. Organizations can restrict whether users are allowed to change certain profile information, including names and avatars, which can help prevent unauthorized or unwanted changes to user identities. Zulip can also synchronize profile information from external identity systems such as LDAP/Active Directory, allowing organizations to manage certain profile information through an existing identity system. However, there are still limitations to consider. Restricting profile changes helps prevent unauthorized modifications, but it does not necessarily prevent a user who already has legitimate access from intentionally providing misleading information when changes are allowed. External identity synchronization can also help maintain consistent profile information, but its effectiveness depends on how the organization configures and manages its identity provider. Overall, Zulip provides useful controls for restricting profile changes, but stronger auditing of profile changes would provide additional support for investigating unauthorized modifications after they occur.
 
 ## Overall Reflection of Team:
 
@@ -174,6 +173,7 @@ As a team we learned that more detail the better, in terms of security requireme
 Improvements or missing features
 
 **Documentation Review:**
+
 One area that could be improved is Zulip’s security setup. The steps to needed to properly set up a Zulip server are spread across several separate pages rather than placed into a single checklist. One can 
 find security recommendations or tips in the [installation](https://zulip.readthedocs.io/en/stable/production/install.html), [reverse proxies](https://zulip.readthedocs.io/en/stable/production/reverse-proxies.html), and [monitoring](https://zulip.readthedocs.io/en/stable/production/troubleshooting.html) pages (plus several more). This is a problem because some who wants to start their own Zulip server, could finish 
 running the main install script, see the that the installation was complete, and assume they are done without realizing that there are still security recommendations that they still need to set up on other pages.
