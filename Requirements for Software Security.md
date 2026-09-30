@@ -157,7 +157,7 @@ A malicious Zulip user with a legitimate standard account attempts to modify ano
 
 **SR24:** Zulip should validate profile-update requests so that unauthorized or malformed changes to personal profile information are rejected.
 
-**SR25:**: Zulip should maintain an auditable record of significant profile/account changes so that unauthorized modifications can be investigated after an incident.
+**SR25:** Zulip should maintain an auditable record of significant profile/account changes so that unauthorized modifications can be investigated after an incident.
 
 **Reflection:**
 
