@@ -165,8 +165,9 @@ The misuse case analysis produced five security requirements focused on preventi
 However, there are still limitations to consider. Restricting profile changes helps prevent unauthorized modifications, but it does not necessarily prevent a user who already has legitimate access from intentionally providing misleading information when changes are allowed. External identity synchronization can also help maintain consistent profile information, but its effectiveness depends on how the organization configures and manages its identity provider. Overall, Zulip provides useful controls for restricting profile changes, but stronger auditing of profile changes would provide additional support for investigating unauthorized modifications after they occur.
 
 ## Overall Reflection of Team:
-What did you learn from this assignment? What did you find most useful?
-Compile individual team member reflections into a single reflection for the team. 
+
+As a team we learned that more detail the better, in terms of security requirements they are very broad. If you can specify how the user plays part in providing security as they interact with server the better. What helped us all out was the visuals from the use diagram gave us a better interaction of the process involving user the server. It helps explain more detail that is harder to convey, and encapsulates everything we need to provide for a better overview of each scenario. 
+
 
 # Part 2: OSS Project Documentation Review
 
