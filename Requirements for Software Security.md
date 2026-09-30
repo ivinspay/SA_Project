@@ -39,7 +39,7 @@ Zulip’s advertised security features support the security requirements. Howeve
 
 ## 2) Use Case - Authenicate User
 
-image: 
+image: ![](images/UseDiagramPayten.png)
 
 **Actors:**
 
