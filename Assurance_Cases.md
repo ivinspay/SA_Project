@@ -2,8 +2,7 @@
 
 
 **Security Claim #1: Account Issues**
-**Diagram**:
-
+**Diagram**: images/Security_Claim1Diagram.drawio.png
 **Claim:
 **Argument: Helps user accounts become protected against unauthorized access when software enforces secure authentication and user permissions for access to account information. A secure account shows recovery procedures, while testing is needed to verify protections mechanisms to work as intended.**
 **Sub-Claims:
