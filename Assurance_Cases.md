@@ -19,7 +19,15 @@ SR25: Audit-log implement and test for profile/account
 
 Security Claim #2: Software Issues
 Security Claim #3: Authentication
-Security Claim #4: Admin Manages Users' Permission and Access
+
+**Security Claim #4: Admin Manages Users' Permission and Access**
+
+**Diagram:** ![Assurance Case](images/Sullivan_assurancecase2.png)
+
+**Claim:** Deactivated Zulip accounts cannot retain access to protected organization resources
+
+**Ai Prompt:** You are an expert software security engineer. Your job is to improve my assurance claims for Zulip and suggest more. Ensure that all claims focus on stopping deactivated accounts from retaining access.  The claims should describe how Zulip blocks deactivated accounts from accessing protected organization resources. Each claim must include an entity, a critical security property, and the expected result. Address things like existing sessions, API keys, login attempts, and anything else that may be relevant. Identify clear rebuttals and develop supporting subclaims that resolve them. End every argument branch with existing, verified evidence from Zulip’s source code, tests, or documentation. Use noun phrases for evidence labels, provide direct source links. Do not make up or infer things that cannot be proven with verified evidence.
+
 Security Claim #5: Push Notifications
 
 **Part 2**
