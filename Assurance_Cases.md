@@ -1,9 +1,12 @@
 **Part 1**
 
 
-Security Claim #1: Account Issues
--Assurance Case Diagrams
--Argument: 
+**Security Claim #1: Account Issues**
+
+
+
+**Argument: Helps user accounts become protected against unauthorized access when software enforces secure authentication and user permissions for access to account information. A secure account shows recovery procedures, while testing is needed to verify protections mechanisms to work as intended.**
+
 
 Security Claim #2: Software Issues
 -Assurance Case Diagrams
