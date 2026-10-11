@@ -25,7 +25,64 @@ image: ![Security_Claim1Diagram](images/Security_Claim1Diagram.drawio.png)
 ## 2) Security Claim: Software Issues
 ## 3) Security Claim: Authentication
 ## 4) Admin Manges Users' Permission and Access
-## 5) Push Notofications
+## 5) Push Notifications
+### image: ![(images/assurance_case_diagram.png)
+**Claim:** Zulip ensures users receive notifications meant for them  
+  
+**Sub-Claims:**  
+Notifications content is unreadable in transit  
+Only authenticated servers and devices can send/receive notifications  
+Compromised accounts can be cut off  
+One user cannot deny delivery to others  
+
+**Evidence based on claims:**  
+End-to-end encryptions  
+Account deactivation and API key/session revocation  
+Authenticated device/push registration  
+Rate limiting  
+
+### AI Use  
+I took pieces of the example prompts in the assignment and modified them with information from the slides. Included in the prompt were my original claims, rebuttals, evidence and one undermine. I was struggling coming up with more evidence and rebuttals and Claude helped flesh out the ones I had and suggested ones I missed.
+
+```
+You are an expert software security engineer. Your job is to inspect and suggest edits to a list of claims, evidence, rebuttals
+and undermines, etc. in an assurance case review. A claim is always worded with a predicate. Avoid claims about the supporting
+method/techniques. Claims should be a reasonable goal. Good arguments eliminate identified doubts or rebuttals. Claims are
+used to eliminate the doubts. Example of a good claim: "The system minimizes information disclosure during communication"
+Doubts can attack claims, evidence, or inferences. Here is an example claim with evidence, rebuttals, and an undermine.
+Analyze based on mobile push notifications, and the threat actors to focus on are malicious users and compromised servers.
+
+Claim: Zulip ensures that users receive notifications meant for them
+Rebuttal 1: A malicious actor intercepts a message
+Claim 1.1: Zulip ensures there is end to end encryption
+Claim 1.3: Zulip uses notification certification and authentication
+Rebuttal 1.1.1/1.3.1: Unless the message was sent from a compromised account
+Rebuttal 2: A malicious user wants to perform a denial of service attack
+Evidence 2: Zulip uses rate limiting
+
+Use this as a potential claim for analysis, ask any clarifying questions
+```  
+The following list is part of what Claude generated in response:
+```
+C0: Zulip ensures users receive notifications meant for them
+
+R1: A malicious actor intercepts a message
+  C1.1: Notification content is unreadable in transit
+    E1.1: End-to-end encryption of push payloads
+    R1.1.1: Sent from a compromised account
+      C1.1.1: Compromised accounts can be cut off
+        E1.1.1: Account deactivation and API key/session revocation
+  C1.3: Only authenticated servers and devices can send/receive notifications
+    E1.3: Push bouncer registration with server authentication and
+          user-bound device tokens
+    R1.3.1: Sent from a compromised account
+      C1.3.1: Compromised accounts can be cut off
+        E1.3.1: Same as E1.1.1
+
+R2: A malicious user performs a denial of service
+  C2: One user cannot deny delivery to others
+    E2: Rate limiting
+```
 
 # Part 2: Access Alignment of Evidence
 
