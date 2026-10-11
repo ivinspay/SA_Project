@@ -30,7 +30,8 @@ image: ![Security_Claim1Diagram](images/Security_Claim1Diagram.drawio.png)
 # Part 2: Access Alignment of Evidence
 
 **Highlight gaps:**
-* Making sure changes are recorded in audit logs, while audit logs are implemented with source code.
+* Making sure changes are recorded in audit logs, while audit logs are implemented with source code. (Claim 1)
 **Record AI Use:**
+* Used AI for rewording of security rewuiremnets from last project to simplfy what they were saying for my claims. (Claim 1)
 **Team Reflection**
 
