@@ -1,7 +1,7 @@
-**Part 1: Assurance Cases for Software Security Engineering**
+# Part 1: Assurance Cases for Software Security Engineering
+## 1) Security Claim: Account Issues
 
-**Security Claim #1: Account Issues**
-**Diagram:** <img width="962" height="985" alt="image" src="https://github.com/user-attachments/assets/fd5c3398-eb01-4a96-80cc-39175c9da5ce" />
+image: 
 **Claim:** Zulip protects user profile information against unauthorizes modifications.
 Argument: Zulip helps user profile information by verifying authorization for profile changes, preventing unauthorized modifications. 
 **Sub-Claims:**
