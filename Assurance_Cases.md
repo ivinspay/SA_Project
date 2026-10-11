@@ -6,7 +6,7 @@ image: ![Security_Claim1Diagram](images/Security_Claim1Diagram.drawio.png)
 * Zulip protects user profile information against unauthorizes modifications.
   
 **Argument:**
-*Zulip helps user profile information by verifying authorization for profile changes, preventing unauthorized modifications. 
+* Zulip helps user profile information by verifying authorization for profile changes, preventing unauthorized modifications. 
 
 **Sub-Claims:**
 * SR21: Profile Ownership 
