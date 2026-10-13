@@ -9,18 +9,28 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 * Zulip helps user profile information by verifying authorization for profile changes, preventing unauthorized modifications. 
 
 **Sub-Claims:**
-* SR21: Profile Ownership 
-* SR22: Unauthorized Profile Changes
-* SR23: Admin Profile Restrictions
-* SR24: Profile Update Validation
-* SR25: Account Chnage Auditing
+* C1(SR21): Profile Ownership 
+* C2(SR22): Unauthorized Profile Changes
+* C3(SR23): Admin Profile Restrictions
+* C4(SR24): Profile Update Validation
+* C5(SR25): Account Chnage Auditing
   
 **Evidence based on claims:**
-* SR21: Profile-update authorization checks in source code and tests
-* SR22: Authorization checks and tests for authorized profile changes
-* SR23: Document and tests for admin controlled profile-editing restrictions
-* SR24: Profiles-update input validation code and rejection tests
-* SR25: Audit-log implement and test for profile/account
+* E1(SR21): Profile-update authorization checks in source code and tests
+* E2(SR22): Authorization checks and tests for authorized profile changes
+* E3(SR23): Document and tests for admin controlled profile-editing restrictions
+* E4(SR24): Profiles-update input validation code and rejection tests
+* E5(SR25): Audit-log implement and test for profile/account
+
+ **Context**
+* CT: This claims applies to Zulip user accounts and their profile information, covering protection from unauthorized access and modification through proper controls, verification, and monitoring.
+
+**Rebuttals**
+* R1: Insufficient authorization could allow unauthorized profile changes
+* R2: Access controls may not be properly enforced allowing changes
+* R3: Misconfiguration could allow user to bypass restrictions
+* R4: Invalid or malicious requests may not be fully rejected
+* R5: Changed may not be logged or could be incomplete
 
 ## 2) Security Claim: Software Issues
 ## 3) Security Claim: Authentication
@@ -109,7 +119,7 @@ Source: [change_user_is_active](https://github.com/zulip/zulip/blob/ef6e64bd3cb4
 
 **Reflection**:
 The assurance case I worked one was interesting. I thought it would be easy to think through, but it turned out be more challenging than I expected. Despite those challenges, the deep dive into Zulip's documentation was very informative. I learned a lot about how it handles account deactivation and the security checks needed to prevent. It is a complicated process because someone could attempt to access the system through retained sessions, saved API keys, or valid login credentials. Zulip has to coordinate several security checks to block these access methods while the account remains inactive. Its source code and documentation was extremely useful because I could follow the relevant functions and understand how connected to the claims I was trying to prove. 
-## 5) Push Notofications
+## 5) Push Notifications
 
 # Part 2: Access Alignment of Evidence
 
