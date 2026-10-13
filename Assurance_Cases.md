@@ -38,7 +38,7 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 image: <img width="1331" height="1042" alt="Assurance Case3 drawio-11 drawio" src="https://github.com/user-attachments/assets/d9f52a3a-8487-4776-9ee7-eb4107ebed6d" />
 
 **Claim:**
-* C1: The system securely authenticates users to ensure that only legitimate users can access their accounts.
+* CT1: The system securely authenticates users to ensure that only legitimate users can access their accounts.
 
 **Argument:**
 * The system protects user accounts through secure authentication mechanisms, including secure password hashing, password-strength enforcement, brute-force monitoring, rate limiting, and secure password recovery. User identity can be verified through user IDs and security questions, while administrative configuration and single sign-on (SSO) policies provide additional authentication controls.
