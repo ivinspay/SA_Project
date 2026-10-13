@@ -9,11 +9,11 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 * Zulip helps user profile information by verifying authorization for profile changes, preventing unauthorized modifications. 
 
 **Sub-Claims:**
-* C1(SR21): Profile Ownership 
-* C2(SR22): Unauthorized Profile Changes
-* C3(SR23): Admin Profile Restrictions
-* C4(SR24): Profile Update Validation
-* C5(SR25): Account Chnage Auditing
+* C1(SR21): Profile Ownership, verifying user authorization for profile changes.  
+* C2(SR22): Unauthorized Profile Changes, prevent unauthorized profile changes.
+* C3(SR23): Admin Profile Restrictions, admins can restrict profile changes (policy/config).
+* C4(SR24): Profile Update Validation, validate profile update requests.
+* C5(SR25): Account Chnage Auditing, keep audit log of profile/account changes.
   
 **Evidence based on claims:**
 * E1(SR21): Profile-update authorization checks in source code and tests
