@@ -71,9 +71,11 @@ image: <img width="1331" height="1042" alt="Assurance Case3 drawio-11 drawio" sr
 
 ## Security Claim #4: Access Prevention for Deactivated Accounts
 
-**Top Level Claim:** Zulip denies deactivated accounts access to protected organization resources after deactivation completes and while those accounts remain inactive. 
-
 **Diagram:** ![Assurance Case](images/Sullivan_diagramV4.png)
+
+**Argument:** The assurance case argues that Zulip denies deactivated accounts access to protected organization resources after deactivation completes and while those accounts remain inactive. Security mechanisms such as invalidating existing sessions, rejecting retained session cookies, checking account status on API requests, blocking password and SAML logins, and removing cached user profiles collectively prevent these accounts from retaining or regaining access while inactive.
+
+**Top Level Claim:** Zulip denies deactivated accounts access to protected organization resources after deactivation completes and while those accounts remain inactive. 
 
 **Ai Prompt:** You are an expert software security engineer. Your job is to improve my assurance claims for Zulip and suggest more. Ensure that all claims focus on stopping deactivated accounts from retaining access.  The claims should describe how Zulip blocks deactivated accounts from accessing protected organization resources. Each claim must include an entity, a critical security property, and the expected result. Address things like existing sessions, API keys, login attempts, and anything else that may be relevant. Identify clear rebuttals and develop supporting subclaims that resolve them. End every argument branch with existing, verified evidence from Zulip’s source code, tests, or documentation. Use noun phrases for evidence labels, provide direct source links. Do not make up or infer things that cannot be proven with verified evidence.
 
