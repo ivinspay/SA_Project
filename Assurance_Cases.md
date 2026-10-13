@@ -16,10 +16,10 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 * C5(SR25): Account Chnage Auditing, keep audit log of profile/account changes.
   
 **Evidence based on claims:**
-* E1(SR21): Profile-update authorization checks in source code and tests
-* E2(SR22): Authorization checks and tests for authorized profile changes
-* E3(SR23): Document and tests for admin controlled profile-editing restrictions
-* E4(SR24): Profiles-update input validation code and rejection tests
+* E1(SR21): Authorization checks in source code and tests
+* E2(SR22): Permission checks and access controls in code
+* E3(SR23): Admin settings and configuration controls in documentation
+* E4(SR24): Input validation code and rejection tests
 * E5(SR25): Audit-log implement and test for profile/account
 
  **Context**
