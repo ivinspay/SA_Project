@@ -3,7 +3,7 @@
 
 image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 **Claim:** 
-* C1: Zulip protects user profile information against unauthorizes modifications.
+* C1: Zulip protects user profile information against unauthorized modifications.
   
 **Argument:**
 * Zulip helps user profile information by verifying authorization for profile changes, preventing unauthorized modifications. 
