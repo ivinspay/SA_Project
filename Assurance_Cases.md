@@ -26,7 +26,7 @@ image: ![Security_Claim1Diagram](images/Security_Claim1Diagram.drawio.png)
 ## 3) Security Claim: Authentication
 ## 4) Admin Manges Users' Permission and Access
 ## 5) Push Notifications
-![Notification Diagram](images/Notification_assurance_case_diagram.png)
+![Notification Diagram](images/Notification_assurance_case_diagram_v2.png)
 **Claim:** Zulip ensures users receive notifications meant for them  
   
 **Sub-Claims:**  
