@@ -21,7 +21,6 @@ Security Claim #2: Software Issues
 Security Claim #3: Authentication
 
 ### Security Claim #4: Access Prevention for Deactivated Accounts
-**Overview:**
 
 **Top Level Claim:** Zulip denies deactivated accounts access to protected organization resources after deactivation completes and while those accounts remain inactive. 
 
