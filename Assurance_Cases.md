@@ -25,8 +25,7 @@ image: ![SecurityClaim1_Image.png](images/SecurityClaim1_Image.png)
 ## 2) Security Claim: Software Issues
 ## 3) Security Claim: Authentication
 
-image: <img width="1331" height="1042" alt="Assurance Case3 drawio-2-10 drawio" src="https://github.com/user-attachments/assets/b57f14bb-583f-4b02-ae32-eafa9f33bb9e" />
-
+image: <img width="1331" height="1042" alt="Assurance Case3 drawio-11 drawio" src="https://github.com/user-attachments/assets/d9f52a3a-8487-4776-9ee7-eb4107ebed6d" />
 
 **Claim:**
 * C1: The system securely authenticates users to ensure that only legitimate users can access their accounts.
@@ -44,7 +43,7 @@ image: <img width="1331" height="1042" alt="Assurance Case3 drawio-2-10 drawio" 
 
 **Evidence based on claims:**
 
-*E1: User ID used as evidence to support user identification and verification.
+* E1: User ID used as evidence to support user identification and verification.
 * E2: Security questions used to help verify user identity.
 * E3: Security questions used as evidence to support verification procedures.
 * E4: Secure password hashing to protect stored passwords.
@@ -58,7 +57,7 @@ image: <img width="1331" height="1042" alt="Assurance Case3 drawio-2-10 drawio" 
 
 **Context:**
 
-*CT1: The user is an employee.
+* CT1: The user is an employee.
 * CT2: An administrator is also a user of the system.
 
 **Rebuttals and Undercutting Arguments:**
