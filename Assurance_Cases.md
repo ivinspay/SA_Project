@@ -23,7 +23,7 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 * E5(SR25): Audit-log implement and test for profile/account
 
  **Context**
-* CT: This claims applies to Zulip user accounts and their profile information, covering protection from unauthorized access and modification through proper controls, verification, and monitoring.
+* CT1: This claims applies to Zulip user accounts and their profile information, covering protection from unauthorized access and modification through proper controls, verification, and monitoring.
 
 **Rebuttals**
 * R1: Insufficient authorization could allow unauthorized profile changes
