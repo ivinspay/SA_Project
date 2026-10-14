@@ -78,6 +78,15 @@ C5: Account Change Auditing (SR25)
 **AI Usefulness for Account Issues**
 This prompt was useful in the sense that it identified my cases weakness from the claims and evidence standpoints. It helped me brainstorm that users can modify their own profiles and by doing so, admin restrictions are enforced for this case and missing information is rejected. The other issues when it came to audit-logs, when missing and/or incomplete can make it harder for investigate unauthorized changes appropriately. These suggestions are very minor, but helped me identify areas where the evidence and rebuttals needed to be stronger for overall better security of my account issue case. 
 
+**Gap**
+* E1-E2 - Needed to verify that authorixation checks are put in place to prevent users from modyifing profile they do not own.
+* E3: Need to confirm that admintrators restrictions work as intended.
+* E4: Need evidence that invalid or unauthroized profile-updates requests could be rejected.
+* E5: Need to verify that audit logs record only significant account changes completely and most accurate ways possible.
+  
+**Reflection**
+This phase showed many gaps between how security requirements and evidence are very much needed to support security overall. E.g. listing authorization checks and audit logs are not enough, the verification that each work properly through Zulips source, documentation, and testing. The AI response also showed the weaknesses and strengthens n rebuttals, ultimately showing that this assurance case needs more evidence to address reasoning and claims that it could fail and what to do in that scenario. 
+
 ## 2) Security Claim: Software Issues
 image: ![Assurance Diagram](images/AssuranceDiagramTW.drawio1.png)
 
