@@ -33,9 +33,11 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 * R5: Changed may not be logged or could be incomplete
 
 **AI Use**
-```I revised my prompt with the information from my case/information, I also included security requirements to help validity of claim from last part of project. 
+I revised my prompt with the information from my case/information, I also included security requirements to help validity of claim from last part of project.
+```
 You are an expert software engineer. Please review my Zulip security claim: "Zulip protects user profile information against unauthorized modifications." Then review my argument, subclaims SR21-SR25, and supporting evidence. Identify missing evidence, possible weaknesses, and improvements to make the assurance case stronger. Focus on profile ownership, unauthorized profile changes, administrator restrictions, profile-update validation, and account-change auditing. Lastly, keeo suggestions simple and organized by claim, evidence, and rebuttal. 
 Adjust where you think there needs to be further analysis or justification!
+
 C0: Zulip protects user profile information against unauthorized modifications.
 C1: Profile Ownership (SR21)
 E1: Profile-update authorization checks and tests.
@@ -55,8 +57,25 @@ R5: Missing or incomplete logs may prevent investigations.
 ```
 
 **AI Prompt Response**
-
-
+```
+C0: Zulip protects user profile information against unauthorized modifications.
+C1: Profile Ownership (SR21)
+- E1: Verify authorization checks ensure users can only modify their own profiles.
+- R1: Authorization checks may not prevent all unauthorized profile changes.
+C2: Unauthorized Profile Changes (SR22)
+- E2: Test that users cannot modify other users' profiles without permission.
+- R2: Authorization weaknesses may allow unauthorized modifications.
+C3: Admin Profile Restrictions (SR23)
+- E3: Verify administrator settings restrict profile changes as intended.
+- R3: Administrative restrictions may not be consistently enforced.
+C4: Profile Update Validation (SR24)
+- E4: Test that malformed and unauthorized profile-update requests are rejected.
+- R4: Invalid requests may bypass validation.
+C5: Account Change Auditing (SR25)
+- E5: Verify audit logs record significant profile and account changes.
+- R5: Incomplete audit logs may make investigations difficult.
+```
+**
 ## 2) Security Claim: Software Issues
 image: ![Assurance Diagram](images/AssuranceDiagramTW.drawio1.png)
 
