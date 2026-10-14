@@ -32,8 +32,8 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 * R4: Invalid or malicious requests may not be fully rejected
 * R5: Changed may not be logged or could be incomplete
 
- **AI Use**
-* 
+**AI Use**
+
 
 ## 2) Security Claim: Software Issues
 image: ![Assurance Diagram](images/AssuranceDiagramTW.drawio.png)
