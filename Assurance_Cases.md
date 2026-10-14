@@ -97,7 +97,7 @@ image: <img width="1331" height="1042" alt="Assurance Case3 drawio-11 drawio" sr
 * UC1: The authentication process may not be secure.
 
 
-## Security Claim #4: Access Prevention for Deactivated Accounts
+## 4) Security Claim: Access Prevention for Deactivated Accounts
 
 **Diagram:** ![Assurance Case](images/Sullivan_diagramV4.png)
 
