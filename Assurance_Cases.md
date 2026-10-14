@@ -36,7 +36,7 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 
 
 ## 2) Security Claim: Software Issues
-image: ![Assurance Diagram](images/AssuranceDiagramTW.drawio.png)
+image: ![Assurance Diagram](images/AssuranceDiagramTW.drawio1.png)
 
 **Analysis/Gaps:**
 Looking at the diagram versus Zulip's documentation, the strongest (still weak but fixable) branch in our assurance case tree would be the tamper branch (Logs can't be altered or deleted without detection). In [Zulip's docs](https://zulip.readthedocs.io/en/latest/production/export-and-import.html#preventing-changes-during-the-export), we found that when exporting files you can actually shutdown the instance and lock everyone out of it before exporting, "so that nobody can send new messages (etc.) while you’re exporting data." This export of data includes an archive of all uploaded files by an organization, so this concept could be be applied to logging so that data can't be tampered with when pulling it, but this is not available today and would need to be built. Our weakest branch seems to be our completeness branch (Every download is recorded in the log). I couldn't find any documentation that showed that Zulip logs included any information like that, not even for messages. Zulip's logs are strictly error logs. 
