@@ -33,6 +33,9 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 * R5: Changed may not be logged or could be incomplete
 
 **AI Use**
+You are an expert software engineer. Please review my Zulip security claim: "Zulip protects user profile information against unauthorized modifications." Then review my argument, subclaims SR21-SR25, and supporting evidence. Identify missing evidence, possible weaknesses, and improvements to make the assurance case stronger. Focus on profile ownership, unauthorized profile chnages, administrator restrictions, profile-update validation, and account-change auditing. Lastly, keeo suggestions simple and organized by claim, evidence, and rebuttal. 
+
+**AI Prompt Response**
 
 
 ## 2) Security Claim: Software Issues
