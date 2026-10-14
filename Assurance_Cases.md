@@ -189,6 +189,8 @@ Password-reset token expiration limits (E10) alongside secure recovery workflows
 
 **Gaps:** Token expiration mechanisms exist in code, but end-to-end testing is needed to confirm that active sessions are terminated immediately upon a password reset completion.
 
+**Source Links:** https://github.com/zulip/zulip
+
 **Reflection:**
 I initially thought authentication would be a straightforward topic to cover, but working through this assurance case revealed far more nuances than I realized. While establishing that Zulip authenticates users is simple on the surface, mapping out how the system handles identity verification, rate limiting, password reset lifecycles, and SSO governance required looking at multiple interconnected layers of security controls. Writing the rebuttals and undercutting arguments was particularly helpful because it forced me to think about what could happen to decrease trust,such as rebuttals and undercutting,by asking how a password recovery link could be abused, how brute-force throttling could be bypassed, or how an imposter might exploit technical support workflows. Reorganizing the evidence tree to address these gaps made the overall argument much stronger and gave me a much deeper appreciation for how many moving parts are involved in securing user authentication.
 
