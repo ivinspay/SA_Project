@@ -6,31 +6,31 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 * C1: Zulip protects user profile information against unauthorized modifications.
   
 **Argument:**
-* Zulip helps user profile information by verifying authorization for profile changes, preventing unauthorized modifications. 
+* Zulip helps user profile information by verifying that its users have the permissions required to make profile chnages, preventing users from modifying other users' profiles without proper authorization, this allows administrators to restrict certain profile settings through configuration, validtaing profile-update requests, and that maintains audit logs by significant profile account chnages. All of these together help reduce the overall risk of aunthorized or improper modification controls. 
 
 **Sub-Claims:**
-* C1(SR21): Profile Ownership, verifying user authorization for profile changes.  
-* C2(SR22): Unauthorized Profile Changes, prevent unauthorized profile changes.
-* C3(SR23): Admin Profile Restrictions, admins can restrict profile changes (policy/config).
-* C4(SR24): Profile Update Validation, validate profile update requests.
-* C5(SR25): Account Chnage Auditing, keep audit log of profile/account changes.
+* C1(SR21): Profile Ownership - Zulip verifies that a user has authorized access to modify specific profile settings with requested change. 
+* C2(SR22): Unauthorized Profile Changes - Zulip also prevents users from modifying another users' personal information without permission or authorization. 
+* C3(SR23): Admin Profile Restrictions - Zulip allows organizations/server admins to restrict profile changes in regards to organizational and configuration settings. 
+* C4(SR24): Profile Update Validation - Zulip validates profile-update requests and the rejects requests that are unauthorized, wrong or ones that do not meet conditions. 
+* C5(SR25): Account Change Auditing - Zulip maintains its auditable records of significant profiles and account changes to support when needed for investigations regarding suspicious or unauthorized activity. 
   
 **Evidence based on claims:**
-* E1(SR21): Authorization checks in source code and tests
-* E2(SR22): Permission checks and access controls in code
-* E3(SR23): Admin settings and configuration controls in documentation
-* E4(SR24): Input validation code and rejection tests
-* E5(SR25): Audit-log implement and test for profile/account
+* E1(SR21): 
+* E2(SR22):
+* E3(SR23): 
+* E4(SR24): 
+* E5(SR25): 
 
  **Context**
-* CT1: This claims applies to Zulip user accounts and their profile information, covering protection from unauthorized access and modification through proper controls, verification, and monitoring.
+* CT1: This claims applies to Zulip user accounts and their profile information, focusing primarily on protection against unauthorized profile modifications; authorization checks, access controls, admin restrictions, requests validation, and auditing.
 
 **Rebuttals**
-* R1: Insufficient authorization could allow unauthorized profile changes
-* R2: Access controls may not be properly enforced allowing changes
-* R3: Misconfiguration could allow user to bypass restrictions
-* R4: Invalid or malicious requests may not be fully rejected
-* R5: Changed may not be logged or could be incomplete
+* R1: 
+* R2: 
+* R3: 
+* R4: 
+* R5: 
 
 **AI Use**
 I revised my prompt with the information from my case/information, I also included security requirements to help validity of claim from last part of project.
