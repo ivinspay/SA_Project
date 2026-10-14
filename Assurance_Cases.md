@@ -33,7 +33,30 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 * R5: Changed may not be logged or could be incomplete
 
 **AI Use**
-You are an expert software engineer. Please review my Zulip security claim: "Zulip protects user profile information against unauthorized modifications." Then review my argument, subclaims SR21-SR25, and supporting evidence. Identify missing evidence, possible weaknesses, and improvements to make the assurance case stronger. Focus on profile ownership, unauthorized profile chnages, administrator restrictions, profile-update validation, and account-change auditing. Lastly, keeo suggestions simple and organized by claim, evidence, and rebuttal. 
+'''You are an expert software engineer. Please review my Zulip security claim: "Zulip protects user profile information against unauthorized modifications." Then review my argument, subclaims SR21-SR25, and supporting evidence. Identify missing evidence, possible weaknesses, and improvements to make the assurance case stronger. Focus on profile ownership, unauthorized profile changes, administrator restrictions, profile-update validation, and account-change auditing. Lastly, keeo suggestions simple and organized by claim, evidence, and rebuttal. 
+Adjust where you think there needs to be further analysis or justification!
+**C1:** Zulip protects user profile information against unauthorized modifications.
+
+**C1 (SR21): Profile Ownership** — Zulip verifies that users are authorized to modify the specific profile associated with the account being changed.  
+    **E1:** Source code showing profile ownership and authorization checks, along with tests confirming that unauthorized profile changes are rejected.  
+    **R1:** Missing or incorrectly implemented authorization checks could allow users to modify profiles they are not authorized to change.
+
+**C2 (SR22): Unauthorized Profile Changes** — Zulip prevents users from modifying another user's personal profile without authorization.  
+    **E2:** Source code showing permission checks and access controls, along with tests for unauthorized profile modifications.  
+    **R2:** Access controls may not be enforced consistently across profile-update requests.
+
+**C3 (SR23): Admin Profile Restrictions** — Zulip allows administrators to restrict profile changes through policies and configuration settings.  
+    **E3:** Documentation showing administrator settings and configuration controls, along with tests confirming that restrictions are enforced.  
+    **R3:** Incorrect configuration or incomplete enforcement could allow profile changes that should be restricted.
+
+**C4 (SR24): Profile Update Validation** — Zulip validates profile-update requests and rejects unauthorized or malformed changes.  
+    **E4:** Source code showing profile-update validation and tests confirming that invalid or unauthorized requests are rejected.  
+    **R4:** Incomplete validation could allow invalid profile changes. Validation alone may not prevent unauthorized changes without proper authorization checks.
+
+**C5 (SR25): Account Change Auditing** — Zulip records significant profile and account changes to support security investigations.  
+    **E5:** Audit-logging implementation and tests confirming that relevant profile or account changes are recorded.  
+    **R5:** Audit records may be missing or incomplete, making unauthorized changes harder to investigate.'''
+
 
 **AI Prompt Response**
 
