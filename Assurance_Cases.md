@@ -33,7 +33,7 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 * R5: Changed may not be logged or could be incomplete
 
 **AI Use**
-'''You are an expert software engineer. Please review my Zulip security claim: "Zulip protects user profile information against unauthorized modifications." Then review my argument, subclaims SR21-SR25, and supporting evidence. Identify missing evidence, possible weaknesses, and improvements to make the assurance case stronger. Focus on profile ownership, unauthorized profile changes, administrator restrictions, profile-update validation, and account-change auditing. Lastly, keeo suggestions simple and organized by claim, evidence, and rebuttal. 
+```You are an expert software engineer. Please review my Zulip security claim: "Zulip protects user profile information against unauthorized modifications." Then review my argument, subclaims SR21-SR25, and supporting evidence. Identify missing evidence, possible weaknesses, and improvements to make the assurance case stronger. Focus on profile ownership, unauthorized profile changes, administrator restrictions, profile-update validation, and account-change auditing. Lastly, keeo suggestions simple and organized by claim, evidence, and rebuttal. 
 Adjust where you think there needs to be further analysis or justification!
 **C1:** Zulip protects user profile information against unauthorized modifications.
 
@@ -55,7 +55,7 @@ Adjust where you think there needs to be further analysis or justification!
 
 **C5 (SR25): Account Change Auditing** — Zulip records significant profile and account changes to support security investigations.  
     **E5:** Audit-logging implementation and tests confirming that relevant profile or account changes are recorded.  
-    **R5:** Audit records may be missing or incomplete, making unauthorized changes harder to investigate.'''
+    **R5:** Audit records may be missing or incomplete, making unauthorized changes harder to investigate.```
 
 
 **AI Prompt Response**
