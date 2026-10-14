@@ -6,7 +6,7 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 * C1: Zulip protects user profile information against unauthorized modifications.
   
 **Argument:**
-* Zulip helps user profile information by verifying that its users have the permissions required to make profile chnages, preventing users from modifying other users' profiles without proper authorization, this allows administrators to restrict certain profile settings through configuration, validtaing profile-update requests, and that maintains audit logs by significant profile account chnages. All of these together help reduce the overall risk of aunthorized or improper modification controls. 
+* Zulip helps user profile information by verifying that its users have the permissions required to make profile changes, preventing users from modifying other users' profiles without proper authorization, this allows administrators to restrict certain profile settings through configuration, validating profile-update requests, and that maintains audit logs by significant profile account changes. All of these together help reduce the overall risk of authorized or improper modification controls. I wanted to add the security requirements SR21-SR25 to show the security requirements that are needed to guide the next phase of this case. It also helps build stronger claims for where evidence was drawn and why, while also supporting and recognizing weaknesses in next phase of these case and how they can be solved. 
 
 **Sub-Claims:**
 * C1(SR21): Profile Ownership - Zulip verifies that a user has authorized access to modify specific profile settings with requested change. 
@@ -16,21 +16,21 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 * C5(SR25): Account Change Auditing - Zulip maintains its auditable records of significant profiles and account changes to support when needed for investigations regarding suspicious or unauthorized activity. 
   
 **Evidence based on claims:**
-* E1(SR21): 
-* E2(SR22):
-* E3(SR23): 
-* E4(SR24): 
-* E5(SR25): 
+* E1(SR21): The source-code inspection and tests demonstrate that the profile-update requests are being verified by the users' authorization to modify the specified profile they should be accessing. 
+* E2(SR22): The permission-checking logic, access-control implementation, and tests elaborate on how unauthorized attempts are modified by another users' profile and is rejected at whole. 
+* E3(SR23): Documentation, configuration settings, and tests prove that administrators can restrict profile changes, that can be as small or little from someones name or there avatar (according to policy). 
+* E4(SR24): The profile-update validation code and rejection tests show miss information and unauthorized requests are not accepted. 
+* E5(SR25): One of most important pieces, audit-log implementation, relevant documentation, and testing establish that profile or account changes are recorded properly in first place to be later used for investigative purposes. 
 
  **Context**
 * CT1: This claims applies to Zulip user accounts and their profile information, focusing primarily on protection against unauthorized profile modifications; authorization checks, access controls, admin restrictions, requests validation, and auditing.
 
 **Rebuttals**
-* R1: 
-* R2: 
-* R3: 
-* R4: 
-* R5: 
+* R1: If the profile-update authorization checks are not correctly verifying target profiles, a user could then modify a profile that they do not have access too. 
+* R2: If permission checks fail or are incomplete more than once, unauthorized users could modify another users' personal information.
+* R3: If administrator restrictions are misconfigured, unavailable, or not enforced,, users can make those profile changes that organizations policies prohibit. 
+* R4: If request validation fails and all the relevant inputs, authorization conditions, missing or suspicious requests could then be accepted and in result improper profile modifications are put into place. 
+* R5: If audit logging is missing or inaccurate, investigators may not be able to do their job properly and determine profile changes have occurred/who performed tasks. 
 
 **AI Use**
 I revised my prompt with the information from my case/information, I also included security requirements to help validity of claim from last part of project.
