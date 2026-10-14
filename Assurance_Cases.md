@@ -17,10 +17,10 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
   
 **Evidence based on claims:**
 * E1(SR21): The source-code inspection and tests demonstrate that the profile-update requests are being verified by the users' authorization to modify the specified profile they should be accessing. https://github.com/zulip/zulip/blob/main/zerver/views/users.py
-* E2(SR22): The permission-checking logic, access-control implementation, and tests elaborate on how unauthorized attempts are modified by another users' profile and is rejected at whole. 
-* E3(SR23): Documentation, configuration settings, and tests prove that administrators can restrict profile changes, that can be as small or little from someones name or there avatar (according to policy). 
-* E4(SR24): The profile-update validation code and rejection tests show miss information and unauthorized requests are not accepted. 
-* E5(SR25): One of most important pieces, audit-log implementation, relevant documentation, and testing establish that profile or account changes are recorded properly in first place to be later used for investigative purposes. 
+* E2(SR22): The permission-checking logic, access-control implementation, and tests elaborate on how unauthorized attempts are modified by another users' profile and is rejected at whole. https://zulip.com/api/update-user
+* E3(SR23): Documentation, configuration settings, and tests prove that administrators can restrict profile changes, that can be as small or little from someones name or there avatar (according to policy). https://api.zulip.com/api/update-profile-data
+* E4(SR24): The profile-update validation code and rejection tests show miss information and unauthorized requests are not accepted. https://github.com/zulip/zulip/blob/main/zerver/views/users.py
+* E5(SR25): One of most important pieces, audit-log implementation, relevant documentation, and testing establish that profile or account changes are recorded properly in first place to be later used for investigative purposes. https://github.com/zulip/zulip/blob/main/docs/production/management-commands.md
 
  **Context**
 * CT1: This claims applies to Zulip user accounts and their profile information, focusing primarily on protection against unauthorized profile modifications; authorization checks, access controls, admin restrictions, requests validation, and auditing.
@@ -83,6 +83,7 @@ This prompt was useful in the sense that it identified my cases weakness from th
 * E3: Need to confirm that admintrators restrictions work as intended.
 * E4: Need evidence that invalid or unauthroized profile-updates requests could be rejected.
 * E5: Need to verify that audit logs record only significant account changes completely and most accurate ways possible.
+(Making sure each is verified and accurate is key for making case useful for Zulip)
   
 **Reflection**
 This phase showed many gaps between how security requirements and evidence are very much needed to support security overall. E.g. listing authorization checks and audit logs are not enough, the verification that each work properly through Zulips source, documentation, and testing. The AI response also showed the weaknesses and strengthens n rebuttals, ultimately showing that this assurance case needs more evidence to address reasoning and claims that it could fail and what to do in that scenario. 
