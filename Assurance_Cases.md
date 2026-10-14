@@ -1,4 +1,4 @@
-# Part 1: Assurance Cases for Software Security Engineering
+[gemini-code-1791940097609.txt](https://github.com/user-attachments/files/33411422/gemini-code-1791940097609.txt)# Part 1: Assurance Cases for Software Security Engineering
 ## 1) Security Claim: Account Issues
 
 image: ![SecurityClaim1.png](images/SecurityClaim1.png)
@@ -33,28 +33,6 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 * R5: If audit logging is missing or inaccurate, investigators may not be able to do their job properly and determine profile changes have occurred/who performed tasks. 
 
 **AI Use**
-I revised my prompt with the information from my case/information, I also included security requirements to help validity of claim from last part of project.
-```
-You are an expert software engineer. Please review my Zulip security claim: "Zulip protects user profile information against unauthorized modifications." Then review my argument, subclaims SR21-SR25, and supporting evidence. Identify missing evidence, possible weaknesses, and improvements to make the assurance case stronger. Focus on profile ownership, unauthorized profile changes, administrator restrictions, profile-update validation, and account-change auditing. Lastly, keeo suggestions simple and organized by claim, evidence, and rebuttal. 
-Adjust where you think there needs to be further analysis or justification!
-
-C0: Zulip protects user profile information against unauthorized modifications.
-C1: Profile Ownership (SR21)
-E1: Profile-update authorization checks and tests.
-R1: A user may attempt to modify another user's profile.
-C2: Unauthorized Profile Changes (SR22)
-E2: Authorization checks and tests preventing unauthorized changes.
-R2: Unauthorized profile modifications may occur.
-C3: Admin Profile Restrictions (SR23)
-E3: Documentation and tests for administrator-controlled restrictions.
-R3: Restrictions may not be properly enforced.
-C4: Profile Update Validation (SR24)
-E4: Input validation code and rejection tests.
-R4: Malformed requests may bypass validation.
-C5: Account Change Auditing (SR25)
-E5: Audit-log implementation and tests.
-R5: Missing or incomplete logs may prevent investigations.
-```
 
 **AI Prompt Response**
 ```
@@ -145,6 +123,52 @@ image: <img width="1331" height="1042" alt="Assurance Case3 drawio-11 drawio" sr
 * R4: The user may forget their password.
 * UC1: The authentication process may not be secure.
 
+**AI USE:**
+I asked Gemini to help review my drafts. My initial prompt included a rough draft assurance case, misuse case, and misuse case details. I edited my draft based on the responses and if I felt confused about the diagram (specifically, about how cluttered the right branch was or the lines which were getting messy). Gemini gave me options helping me brainstorm sub-claims and rebuttals to help declutter my right branch. Then I had Gemini review my finished draft for inconsistencies. 
+
+**Prompt**
+Image: <img width="1019" height="651" alt="Screenshot 2026-10-13 at 8 21 01 PM" src="https://github.com/user-attachments/assets/12f3fe01-b211-472a-b918-6213021119f8" />
+
+
+
+**Alignment of Evidence and Identified Gaps**
+
+**Evidence E1 & E2 & E3 (User Identification & Support Verification):**
+
+**User ID and Security Questions for Identity Verification**
+The authentication process uses user ID records (E1) along with security question procedures (E2, E3) to verify identity during account recovery and support inquiries. This evidence supports C2 (Contacting support for assistance), C3 (Identity verification), and C4 (Technical support verification) by establishing standard verification channels when users lose access.
+
+**Gaps:** Security questions rely on fixed user knowledge, which can be vulnerable to social engineering or guessing. While these mechanisms verify user identity on paper, further verification is needed to determine if multi-factor authentication (MFA) or out-of-band verification is enforced during high-risk support interactions.
+
+**Evidence E4 & E5 (Password Security & Enforcement):**
+
+**Password Hashing and Strength Enforcement**
+Zulip implements password hashing (E4) to protect stored user credentials and password-strength policies (E5) to ensure users create complex passwords during creation and reset. This directly supports sub-claim C5 (Secure system authentication) by mitigating offline dictionary attacks and weak password compromises.
+**Gaps:** The presence of password-strength checks ensures complexity, but test execution is required to confirm whether custom dictionary checks or credential-stuffing protections are actively enforced at runtime.
+
+**Evidence E6 & E7 (Administrative & SSO Governance):**
+
+**Audit Logs and Single Sign-On (SSO) Policy Settings**
+
+Administrative configuration logs (E6) capture changes to authentication settings, while SSO policy settings (E7) allow organizations to delegate authentication to external identity providers (OAuth/SAML). This supports C5 (Secure authentication) by enforcing centralized policy controls and auditing administrative overrides.
+Gaps: While SSO policies reduce password sprawl, fallback local authentication options might leave secondary login vectors open if not explicitly disabled by administrators.
+
+**Evidence E8 & E9 (Brute-Force Protection & Rate Limiting):**
+
+**Brute-Force Monitoring and Rate Limiting Controls**
+Brute-force monitoring logs (E8) and rate-limiting rules (E9) track and restrict excessive failed authentication attempts. This supports C5 (Secure authentication) and addresses rebuttal UC1 (Insecure authentication process) by throttling automated login attacks against user accounts.
+
+**Gaps:** Rate limiting is enforced per endpoint/IP, but distributed brute-force attacks across varying IP blocks need empirical testing to verify if account lockout thresholds trigger cleanly.
+
+**Evidence E10 & E11 (Password Recovery Controls):**
+
+**Password-Reset Expiration and Account Recovery Procedures**
+Password-reset token expiration limits (E10) alongside secure recovery workflows (E11) support C6 (Safe password recovery). This directly mitigates rebuttal R4 (User forgot password) and R1 (Inability to log in) by ensuring recovery links expire quickly and cannot be reused by malicious actors.
+
+**Gaps:** Token expiration mechanisms exist in code, but end-to-end testing is needed to confirm that active sessions are terminated immediately upon a password reset completion.
+
+**Reflection:**
+I initially thought authentication would be a straightforward topic to cover, but working through this assurance case revealed far more nuances than I realized. While establishing that Zulip authenticates users is simple on the surface, mapping out how the system handles identity verification, rate limiting, password reset lifecycles, and SSO governance required looking at multiple interconnected layers of security controls. Writing the rebuttals and undercutting arguments was particularly helpful because it forced me to think about what could happen to decrease trust,such as rebuttals and undercutting,by asking how a password recovery link could be abused, how brute-force throttling could be bypassed, or how an imposter might exploit technical support workflows. Reorganizing the evidence tree to address these gaps made the overall argument much stronger and gave me a much deeper appreciation for how many moving parts are involved in securing user authentication.
 
 ## 4) Security Claim: Access Prevention for Deactivated Accounts
 
