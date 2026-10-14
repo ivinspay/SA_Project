@@ -137,7 +137,7 @@ image: <img width="1331" height="1042" alt="Assurance Case3 drawio-11 drawio" sr
 * UC1: The authentication process may not be secure.
 
 
-## Security Claim #4: Access Prevention for Deactivated Accounts
+## 4) Security Claim: Access Prevention for Deactivated Accounts
 
 **Diagram:** ![Assurance Case](images/Sullivan_diagramV4.png)
 
@@ -181,7 +181,7 @@ Source: [test_login_deactivated_user](https://github.com/zulip/zulip/blob/ef6e64
 * Account status update and profile cache removal code
 Zulip’s source code includes change_user_is_active, flush_user_profile, and delete_user_profile_caches. These functions save the account’s inactive status and clear the affected cache profiles. These functions support C9 and partially support C8 by showing how account deactivation triggers the removal of affected cached information.
 
-* Gaps: The code shows that affected cached profiles are cleared.  However, verification is needed on whether request started deactivation use the correct account status when other request overlap deactivation. 
+* Gaps: The code shows that affected cached profiles are cleared.  However, verification is needed on whether request started after deactivation consistently use the correct account status when other request overlap deactivation. 
 Source: [change_user_is_active](https://github.com/zulip/zulip/blob/ef6e64bd3cb4e2fe7ed993e68e3b05ff576ee816/zerver/actions/users.py#L240-L253), [flush_user_profile](https://github.com/zulip/zulip/blob/ef6e64bd3cb4e2fe7ed993e68e3b05ff576ee816/zerver/lib/cache.py#L689-L698), and  [delete_user_profile_caches](https://github.com/zulip/zulip/blob/ef6e64bd3cb4e2fe7ed993e68e3b05ff576ee816/zerver/lib/cache.py#L612-L628).
 
 **Reflection**:
