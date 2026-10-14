@@ -168,19 +168,6 @@ Source: [change_user_is_active](https://github.com/zulip/zulip/blob/ef6e64bd3cb4
   
 ## 5) Push Notofications
 ![Notification Diagram](images/Notification_assurance_case_diagram_v2.png)
-**Claim:** Zulip ensures users receive notifications meant for them  
-  
-**Sub-Claims:**  
-Notifications content is unreadable in transit  
-Only authenticated servers and devices can send/receive notifications  
-Compromised accounts can be cut off  
-One user cannot deny delivery to others  
-
-**Evidence based on claims:**  
-End-to-end encryptions  
-Account deactivation and API key/session revocation  
-Authenticated device/push registration  
-Rate limiting  
 
 ### AI Use  
 I took pieces of the example prompts in the assignment and modified them with information from the slides. Included in the prompt were my original claims, rebuttals, evidence and one undermine. I was struggling coming up with more evidence and rebuttals and Claude helped flesh out the ones I had and suggested ones I missed.
