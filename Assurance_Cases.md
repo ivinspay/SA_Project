@@ -303,5 +303,5 @@ Throughout this sprint/segment of the assignment I learned how to draw an assura
 
 # Part 2: Access Alignment of Evidence
   
-**Team Reflection**
-
+**Team Reflection**  
+Overall, we learned how to design, iterate through, and finalize assurance cases by thinking of claims, rebuttals, and how to provide evidence that backs up the claims. We all thought this would be a fairly easy and straightforward assignment but as we started working on it, it was like pulling a loose thread. One thing led to another, and we were surprised at how much more effort it actually took. Most of our claims quickly fell apart once we started thinking about rebuttals and looking for gaps, some claims took a little more digging and effort to get to where we felt comfortable with how it flowed on the diagrams. We all ended up utilizing prompt engineering to check and update our assurance cases to further strengthen our claims, rebuttals, and evidence. This was crucial in providing a more in-depth and thorough analysis of all our cases. Originally, most of us skipped the AI aspect but upon review of our previous assignment’s grade and rereading of this assignment, we all made sure to enhance our reports with the help of AI. Seeing all our different prompts and reviewing all the results shows how minor tweaks to how you lead the AI can produce vastly different results.
