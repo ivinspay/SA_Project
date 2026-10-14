@@ -32,6 +32,9 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 * R4: Invalid or malicious requests may not be fully rejected
 * R5: Changed may not be logged or could be incomplete
 
+ **AI Use**
+* 
+
 ## 2) Security Claim: Software Issues
 image: ![Assurance Diagram](images/AssuranceDiagramTW.drawio.png)
 
@@ -212,12 +215,6 @@ R2: A malicious user performs a denial of service
 Throughout this sprint/segment of the assignment I learned how to draw an assurance case diagram and over time fine tune it to be concise yet still show where there is evidence and where claims can fall short. I also leaned into the prompt engineering on this assignment to further strengthen my claims, rebuttals, and evidence to cover areas that I missed to begin with. I found the template that was provided for the assurance case very useful. To see an example laid out and how each branch from the claim led to more and more evidence helped me visualize my own assurance case diagram as I worked through piecing it together.
 
 # Part 2: Access Alignment of Evidence
-
-**Highlight gaps:**
-* Making sure changes are recorded in audit logs, while audit logs are implemented within source code. (Claim 1)
-  
-**Record AI Use:**
-* Used AI for rewording of security rewuiremnets from last project to simplfy what they were saying for my claims. (Claim 1)
   
 **Team Reflection**
 
