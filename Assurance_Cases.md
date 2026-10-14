@@ -33,6 +33,18 @@ image: ![SecurityClaim1.png](images/SecurityClaim1.png)
 * R5: Changed may not be logged or could be incomplete
 
 ## 2) Security Claim: Software Issues
+image: ![Assurance Diagram](images/AssuranceDiagramTW.drawio.png)
+
+**Analysis:**
+Looking at the diagram versus Zulip's documentation, the strongest (still weak but fixable) branch in our assurance case tree would be the tamper branch (Logs can't be altered or deleted without detection). In [Zulip's docs](https://zulip.readthedocs.io/en/latest/production/export-and-import.html#preventing-changes-during-the-export), we found that when exporting files you can actually shutdown the instance and lock everyone out of it before exporting, "so that nobody can send new messages (etc.) while you’re exporting data." This export of data includes an archive of all uploaded files by an organization, so this concept could be be applied to logging so that data can't be tampered with when pulling it, but this is not available today and would need to be built. Our weakest branch seems to be our completeness branch (Every download is recorded in the log). I couldn't find any documentation that showed that Zulip logs included any information like that, not even for messages. Zulip's logs are strictly error logs. 
+
+I didn’t really use a prompt with AI during this assignment in the typical way that someone would probably use one. I fed the AI the key points found in the instructions and asked it to guide me through finding the answers. It gave me a step-by-step list of things to do and as we went through them the chatbot gave me feedback and tips to improve my answers as soon as I submitted them. I would say this was extremely useful in helping me understand the assignment and the material more.
+
+
+**Reflection:**
+During this assignment, I learned just how much work it takes to effectively backup a claim. Our top claim fell apart when I checked it, because Zulip doesn’t have download logs, so I rewrote it to be about how the organization deploys Zulip, and the missing feature turned into a gap for Part 2 instead of a hole in the argument. I think that writing the rebuttals helped the most. I took each word in the claim and asked how it could be wrong, and that’s how I came up with things like admins editing logs without anyone noticing, bulk exports that don’t get logged, and downloads that don’t need a login.
+
+
 ## 3) Security Claim: Authentication
 
 image: <img width="1331" height="1042" alt="Assurance Case3 drawio-11 drawio" src="https://github.com/user-attachments/assets/d9f52a3a-8487-4776-9ee7-eb4107ebed6d" />
