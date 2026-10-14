@@ -75,7 +75,9 @@ C5: Account Change Auditing (SR25)
 - E5: Verify audit logs record significant profile and account changes.
 - R5: Incomplete audit logs may make investigations difficult.
 ```
-**
+**AI Usefulness for Account Issues**
+This prompt was useful in the sense that it identified my cases weakness from the claims and evidence standpoints. It helped me brainstorm that users can modify their own profiles and by doing so, admin restrictions are enforced for this case and missing information is rejected. The other issues when it came to audit-logs, when missing and/or incomplete can make it harder for investigate unauthorized changes appropriately. These suggestions are very minor, but helped me identify areas where the evidence and rebuttals needed to be stronger for overall better security of my account issue case. 
+
 ## 2) Security Claim: Software Issues
 image: ![Assurance Diagram](images/AssuranceDiagramTW.drawio1.png)
 
