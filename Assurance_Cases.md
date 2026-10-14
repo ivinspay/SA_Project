@@ -244,7 +244,7 @@ Source: [change_user_is_active](https://github.com/zulip/zulip/blob/ef6e64bd3cb4
 **Reflection**:
 * The assurance case I worked one was interesting. I thought it would be easy to think through, but it turned out be more challenging than I expected. Despite those challenges, the deep dive into Zulip's documentation was very informative. I learned a lot about how it handles account deactivation and the security checks needed to prevent. It is a complicated process because someone could attempt to access the system through retained sessions, saved API keys, or valid login credentials. Zulip has to coordinate several security checks to block these access methods while the account remains inactive. Its source code and documentation was extremely useful because I could follow the relevant functions and understand how connected to the claims I was trying to prove.
   
-## 5) Push Notofications
+## 5) Push Notifications
 ![Notification Diagram](images/Notification_assurance_case_diagram_v2.png)
 
 ### AI Use  
