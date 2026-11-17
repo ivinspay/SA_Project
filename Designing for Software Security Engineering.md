@@ -1,12 +1,12 @@
-# Part 1: Threat Modeling:
+# Part 1: Threat Modeling
 
 
 
-# AI Usage:
+# AI Usage
 
 
 
-# Part 2: Observations:
+# Part 2: Observations
 
 
 
