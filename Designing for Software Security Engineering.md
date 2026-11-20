@@ -26,6 +26,15 @@ Then for observations, we will simply look at Zulip's existing protections and a
 
 **2.1: Existing Protection for Zulip**
 
+Zulip has a few existing potential security mechanism designed to protect user accounts and profile information in respect to what we are designing for this project. 
+
+* 1. User Authentication
+  2. User Authorization
+  3. Profile Information Validiation
+  4. Audit Logging
+  5. Rate Limiting 
+
+
 **2.2: Security Gaps & Recommendations**
 
 **2.3: Team Collaboration**
