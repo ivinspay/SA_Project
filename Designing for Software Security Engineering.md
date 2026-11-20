@@ -28,9 +28,17 @@ havent decided yet
 
 Zulip has a few existing potential security mechanisms designed to protect user accounts and profile information in respect to what we have created based on our project.
 
-* Authorization
+Authorization
 
-* Profile validation
+* Zulip also offers permission checks that can control which users perform certain tasks within environment. These checks make sure that when a user changes information they have authroization and are authorized to modify. This part showed code of how that implemented within system and how each each key feature mentioned comes from authorization and each department e.g. Endpoint all can play a part in this process.
+
+Source: https://github.com/zulip/zulip/blob/main/zerver/views/user_settings.py
+
+Profile validation
+
+* Zulip shows process update requests through the view of server-side application. This helps validate and ensure that the submitted information follows the applications set in place security requirements and inherently prevents invalid and unauthorized changes when flagged in system. This is also represented as code to do so, while providing different type of errors and how that is validated in system. 
+
+Source: https://github.com/zulip/zulip/blob/main/zerver/views/user_settings.py
 
 Authentication
 
@@ -38,8 +46,11 @@ Authentication
 
 Source: https://github.com/zulip/zulip/blob/main/docs/production/authentication-methods.md
    
-7. Audit Logging
+Audit Logging
 
+* This is least emphasized but key importance in existing system and our teams project. The functionality records show how administration supports account related actions. These records in the files investigate changes and identify potenially unauthorized activity to show up. This is also code on how to do go about doing that within system. Interestingly here made are just extracting data from current models from authentication methods and using data to see for analytical purposes.
+
+Source: https://github.com/zulip/zulip/blob/main/zerver/models/realm_audit_logs.py?utm_source=chatgpt.com
 
 **2.2: Security Gaps & Recommendations**
 
