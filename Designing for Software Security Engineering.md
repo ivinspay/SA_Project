@@ -20,10 +20,6 @@ Then for observations, we will simply look at Zulip's existing protections and a
  - [Threat Modeling Report for Zulip Sign-in, Messaging and Attachments](https://htmlpreview.github.io/?https://github.com/SA_Project/blob/main/images/Zulip%20Sign-in%2C%20Messaging%20and%20Attachments.htm)
 
 
-# AI Usage
-havent decided yet
-
-
 # Part 2: Observations
 
 **2.1: Existing Protections for Zulip**
