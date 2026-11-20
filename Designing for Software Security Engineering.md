@@ -18,8 +18,8 @@ For our notifications DFD, we came up with this diagram:
  payten
  
 **1.6: HTML Reports (link)**
- - [Threat Modeling Report for Zulip Sign-in, Messaging and Attachments](https://htmlpreview.github.io/?https://github.com/SA_Project/blob/main/images/Zulip%20Sign-in%2C%20Messaging%20and%20Attachments.htm)
-
+ - [Threat Modeling Report for Zulip Sign-in, Messaging and Attachments](https://htmlpreview.github.io/?https://github.com/SA_Project/blob/main/images/Zulip%20Sign-in%2C%20Messaging%20and%20Attachments.htm)  
+ - [Threat Modeling Report for Zulip Notifications](https://htmlpreview.github.io/?https://github.com/ivinspay/SA_Project/blob/main/reports/Notificaiton_report 2.htm)   
 
 # Part 2: Observations
 
