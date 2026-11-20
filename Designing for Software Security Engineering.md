@@ -32,8 +32,9 @@ Zulip has a few existing potential security mechanisms designed to protect user 
 
 * Profile validation
 
-*Authentication
-Zulip does support a wide variety of authentication methods; email and password, social   authentication, Microsoft Entra ID, LDAP (including Active Directory), SAML, OpenID Connect,  JSON Web Tokens (JWT), Apache-based SSO with REMOTE_USER. All these methods verify a user's identity before fully granting them access to an account. Authentication is one of the most important features as its prevents unwanted access for users to access other user's accounts and modify any profile information in that process. 
+Authentication
+
+* Zulip does support a wide variety of authentication methods; email and password, social   authentication, Microsoft Entra ID, LDAP (including Active Directory), SAML, OpenID Connect,  JSON Web Tokens (JWT), Apache-based SSO with REMOTE_USER. All these methods verify a user's identity before fully granting them access to an account. Authentication is one of the most important features as its prevents unwanted access for users to access other user's accounts and modify any profile information in that process. 
 
 Source: https://github.com/zulip/zulip/blob/main/docs/production/authentication-methods.md
    
