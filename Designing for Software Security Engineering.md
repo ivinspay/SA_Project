@@ -15,6 +15,7 @@ Then for observations, we will simply look at Zulip's existing protections and a
 
 **1.5: Mitigation Strategies**
  payten
+ 
 **1.6: HTML Reports (link)**
  - [Threat Modeling Report for Zulip Sign-in, Messaging and Attachments](https://htmlpreview.github.io/?https://github.com/SA_Project/blob/main/images/Zulip%20Sign-in%2C%20Messaging%20and%20Attachments.htm)
 
