@@ -14,25 +14,31 @@ Then for observations, we will simply look at Zulip's existing protections and a
 **1.4: Threat Analysis Details**
 
 **1.5: Mitigation Strategies**
-
+ payten
 **1.6: HTML Reports (link)**
 
 
 # AI Usage
-
+havent decided yet
 
 
 # Part 2: Observations
 
-**2.1: Existing Protection for Zulip**
+**2.1: Existing Protections for Zulip**
 
-Zulip has a few existing potential security mechanism designed to protect user accounts and profile information in respect to what we are designing for this project. 
+Zulip has a few existing potential security mechanisms designed to protect user accounts and profile information in respect to what we have created based on our project.
 
-* 1. User Authentication
-  2. User Authorization
-  3. Profile Information Validiation
-  4. Audit Logging
-  5. Rate Limiting 
+1. Authorization
+   
+3. Profile validation
+   
+5. Authentication
+
+Zulip does support a wide variety of authentication methods; email and password, social authentication, Microsoft Entra ID, LDAP (including Active Directory), SAML, OpenID Connect, JSON Web Tokens (JWT), Apache-based SSO with REMOTE_USER. All these methods verify a user's identity before fully granting them access to an account. Authentication is one of the most important features as its prevents unwanted access for users to access other user's accounts and modify any profile information in that process. 
+
+Source: https://github.com/zulip/zulip/blob/main/docs/production/authentication-methods.md
+   
+7. Audit Logging
 
 
 **2.2: Security Gaps & Recommendations**
