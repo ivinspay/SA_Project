@@ -20,19 +20,14 @@ For our notifications DFD, we came up with this diagram:
 
 Spoofing
 * The attack could gain stolen credentials, to then act as they are the user that should have legitamite access.
-  
 Tampering 
 * The attack could modify anything that could be in transit when you look at certain requests from messaging.
-
 Redupdiation
 * Denial of submitting or receiving a message as the user.
-
 Information Disclosure
 * Anything sensitive could be exposed in terms of message date or leaked credentials.
-
 Denial of Service
 * Having excessive message requests could overwhelm the front-end of business operations.
-
 Elevation of Privilige
 * The attacker can try and gain access then get into accounts that can expose other functions.
 
@@ -40,19 +35,14 @@ Elevation of Privilige
 
 Spoofing
 * The attacker acts as the Zulip server and then can send any notification that even may be unauthorized.
-
 Tampering
 * The notification settings can be modified in transit that can impact notification service itself.
-
 Repudiation
 * The server cannot dischper if a notifcation was intially sent is logging is not considered in process.
-
 Information Disclosure
 * Anything confidential can be exposed like other diagram via notification context.
-
 Denial of Service
 * The large amounts of requests can cause issues or internal problems to push notification service.
-
 Elevation of Privilige
 * The attacker can abuse the notification system through requests that can trickle to expose unauthorized user and accounts they are trying to acquire. 
 
@@ -126,6 +116,9 @@ Identified in our previous research, one significant gap was the lack of attachm
 
 **-Kauser:** I focused on reviewing the models and reports. Even from that vantage point, tracing Zulip's data flows, trust boundaries, and STRIDE findings helped me understand why identifying potential attack vectors and security gaps early matters so much. Reviewing the team's analysis also made it clearer how the earlier diagrams connect to threat modeling and where security improvements are still needed before issues can be exploited.
 
+**-Payten:** I provided the structure of report and started off providing a little understanding of what we were trying to achieve here as a team. I also did the STRIDE analysis, very briefly as what it could intel but specfically thats harder to analyze as we do not know what hypothetical. Lastly I also did some mitigation in terms of redesigning to eliminate, apply standard mitigation, invent new mitigations, and accept vulnerability in design to show you will be to reinvent wheel and take on risk to be successful here. 
+
 **2.5: Conclusion**
 
+This assignment showed threat modeling from a perspective of having a current basis from Zulip's existing protections. The Data Flow Diagrams and STRIDE show in terms of messaging, attachments, and push notifications all are effected through different interactions. The tool used to generate the diagrams only included the useful threats that need to be reviewed and understand mitigation strategies. Zulips existing protections: authorization, profile validation, authentication, and audit logging can reduce risk if improved per interaction use. This project helped not only my team but hopefully people who read this that threat modeling is needed within security and depends on elevating current software to be more secure.  
 
