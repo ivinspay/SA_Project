@@ -16,14 +16,54 @@ For our notifications DFD, we came up with this diagram:
 ![Notifications DFD](images/Notification_DFD.png)  
 **1.3: STRIDE Threat Analysis**
 
-Spoofing
-* 
+Messaging and Attachments (Zulip sign in --> Messaging/Attachments)
 
-**1.4: Threat Analysis Details**  
+Spoofing
+* The attack could gain stolen credentials, to then act as they are the user that should have legitamite access.
+  
+Tampering 
+* The attack could modify anything that could be in transit when you look at certain requests from messaging.
+
+Redupdiation
+* Denial of submitting or receiving a message as the user.
+
+Information Disclosure
+* Anything sensitive could be exposed in terms of message date or leaked credentials.
+
+Denial of Service
+* Having excessive message requests could overwhelm the front-end of business operations.
+
+Elevation of Privilige
+* The attacker can try and gain access then get into accounts that can expose other functions.
+
+Notification (Zulip Server --> Push Notification Service)
+
+Spoofing
+* The attacker acts as the Zulip server and then can send any notification that even may be unauthorized.
+
+Tampering
+* The notification settings can be modified in transit that can impact notification service itself.
+
+Repudiation
+* The server cannot dischper if a notifcation was intially sent is logging is not considered in process.
+
+Information Disclosure
+* Anything confidential can be exposed like other diagram via notification context.
+
+Denial of Service
+* The large amounts of requests can cause issues or internal problems to push notification service.
+
+Elevation of Privilige
+* The attacker can abuse the notification system through requests that can trickle to expose unauthorized user and accounts they are trying to acquire. 
 
 **1.5: Mitigation Strategies**  
- payten  
- 
+
+Zulip Server --> Push Notification Service 
+* Redesign to eliminate: Trying to not include sensitive contents when looking at push notifications, the more generic the better.
+* Mitigation Standards: Use Zulips previous controls and add; encryption, input validation, access controls, rate limits.
+* Invent new mitigations: This is risky, but if you invest more in abnormal activity that provide alerts the volume of notification requests could be monitored better.
+* Accept vulnerability: Relying on external push providers that can dictate if risks are low and approved for delivery disruptions.
+  
 ***1.5a: AI Statement***  
 On this assignment, there were a handful of mitigations that I got blocked on so I turned to Claude and asked for help searching the documentation for Zulip on the issues I couldn’t find answers to. Having the ability to quickly scan for specific use cases and mitigations 
 was invaluable in this case as it would have taken way too long to scour some for some of the pages that had the answers I was looking for. I had Claude give me a justification for a specific threat and then also provide links to where I could find the answer it provided me. I verified the
