@@ -7,18 +7,24 @@ The course of action to support these scenarios are broken down into structured 
 
 Then for observations, we will simply look at Zulip's existing protections and any recommendations based on those security gaps. Then lastly we will collaborate on how we went about project and what we concluded from process and what results tell us about our design capabilities. 
 
-**1.2: Data Flow Diagrams (DFDs)**
-
+**1.2: Data Flow Diagrams (DFDs)**  
+For our notifications DFD, we came up with this diagram:  
+![Notifications DFD](images/Notification_DFD.png)  
 **1.3: STRIDE Threat Analysis**
 
-**1.4: Threat Analysis Details**
+**1.4: Threat Analysis Details**  
 
-**1.5: Mitigation Strategies**
- payten
+**1.5: Mitigation Strategies**  
+ payten  
+ 
+***1.5a: AI Statement***  
+On this assignment, there were a handful of mitigations that I got blocked on so I turned to Claude and asked for help searching the documentation for Zulip on the issues I couldn’t find answers to. Having the ability to quickly scan for specific use cases and mitigations 
+was invaluable in this case as it would have taken way too long to scour some for some of the pages that had the answers I was looking for. I had Claude give me a justification for a specific threat and then also provide links to where I could find the answer it provided me. I verified the
+information it was giving me was accurate and covering the point I was looking for before adding it to my TMT report.
  
 **1.6: HTML Reports (link)**
- - [Threat Modeling Report for Zulip Sign-in, Messaging and Attachments](https://htmlpreview.github.io/?https://github.com/SA_Project/blob/main/images/Zulip%20Sign-in%2C%20Messaging%20and%20Attachments.htm)
-
+ - [Threat Modeling Report for Zulip Sign-in, Messaging and Attachments](https://htmlpreview.github.io/?https://github.com/SA_Project/blob/main/images/Zulip%20Sign-in%2C%20Messaging%20and%20Attachments.htm)  
+ - [Threat Modeling Report for Zulip Notifications](https://htmlpreview.github.io/?https://github.com/loedetyler/SA_Project/blob/main/reports/Notification_report_2.htm)   
 
 # Part 2: Observations
 
@@ -50,8 +56,9 @@ Audit Logging
 
 Source: https://github.com/zulip/zulip/blob/main/zerver/models/realm_audit_logs.py?utm_source=chatgpt.com
 
-**2.2: Security Gaps & Recommendations**
-
+**2.2: Security Gaps & Recommendations**  
+After doing the TMT exercise, for the notification case, there were a lot of Denial of Service threats on top of Escalation of Privilege threats that the app found. As far as gaps, most of them were covered in the documentation. There were a few that I put as needs investigation just
+ because it relied on configurations set up on the host/server but for default there wasn't much of a gap around the Notification service.
 **2.3: Team Collaboration**
 
 **2.4: Team Reflection**
