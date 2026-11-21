@@ -23,16 +23,16 @@ Spoofing
   
 Tampering 
 * The attack could modify anything that could be in transit when you look at certain requests from messaging.
-  
+
 Redupdiation
 * Denial of submitting or receiving a message as the user.
-  
+
 Information Disclosure
 * Anything sensitive could be exposed in terms of message date or leaked credentials.
-  
+
 Denial of Service
 * Having excessive message requests could overwhelm the front-end of business operations.
-  
+
 Elevation of Privilige
 * The attacker can try and gain access then get into accounts that can expose other functions.
 
@@ -41,23 +41,33 @@ Elevation of Privilige
 
 Spoofing
 * The attacker acts as the Zulip server and then can send any notification that even may be unauthorized.
-  
+
 Tampering
 * The notification settings can be modified in transit that can impact notification service itself.
-  
+
 Repudiation
 * The server cannot dischper if a notifcation was intially sent is logging is not considered in process.
-  
+
 Information Disclosure
 * Anything confidential can be exposed like other diagram via notification context.
-  
+
 Denial of Service
 * The large amounts of requests can cause issues or internal problems to push notification service.
-  
-Elevation of Privilige
-* The attacker can abuse the notification system through requests that can trickle to expose unauthorized user and accounts they are trying to acquire. 
+
+Elevation of Privilege
+* The attacker can abuse the notification system through requests that can trickle to expose unauthorized user and accounts they are trying to acquire.
 
 **1.5: Mitigation Strategies**  
+
+**Messaging and Attachments (Zulip sign in --> Messaging/Attachments)**
+
+* Redesign to eliminate: Restrict direct access to message and attachment storage by requiring all requests to pass through the Zulip server. This prevents users from bypassing authorization checks to access private messages or attachments.
+  
+* Mitigation Standards: Implement rate limiting to prevent excessive messaging requests and Denial-of-Service attacks,use authentication and authorization protocols to verify user identities and ensure only legitimate users can access messages and attachments, encrypt messages and attachments during transmission using HTTPS/TLS and protect stored information through encryption at rest, maintain audit logs with timestamps and user activity records to help investigate unauthorized modifications or disputed messaging activities.
+
+* Invent new mitigations: Adding step-up verification (such as a multi-factor authentication (MFA),CAPTCHA, or, re-authentication) when accessing sensitive data or high-risk actions could lower credential-stuffing or phishing success, though it adds friction for legitimate users and requires careful tuning to avoid false positives. 
+  
+* Accept vulnerability: Messaging disruptions may occur because of network outages, server maintenance, or unexpected service interruptions.Additionally, audit logs cannot completely prevent users from denying their actions, but retain sufficient records to investigate disputes and suspicious activity.
 
 **Zulip Server --> Push Notification Service**
 
@@ -123,13 +133,10 @@ Identified in our previous research, one significant gap was the lack of attachm
 
 **- Tamir:** Creating the DFD for Zulip showed me how messages and attachments move between users, the application server, and storage. Trust boundaries are important, especially when sensitive information enters or leaves the server. I used the STRIDE analysis and that help me realize that simple operations, like sending messages or downloading files, can potentially introduce security risks. The most helpful part was being able to connect what we did in previous assignments to the DFDs and see where security still needs to be improved.  
 
-**- Tyler:** I agree with Michael, this assignment was challenging. Doesn't quite remind me of what I do at work but it was fun getting to play around with a new tool that I had no clue existed. Having the ability to draw up a diagram showing boundaries, processes, datastores,  interactors, and the flows between them and then hitting a button to generate some of the threats that could be found in projects designed in the way we lay it out. Obviously if there are errors in the layout, that will reflect in the threats found whether that's showing a threat that wouldn't be found in a particular data flow or if we don't catch a threat that would be found, it is important to fully understand how to design these diagrams. It also helps further our understanding of just what exactly we are analyzing with this project. Doing this exercise furthers our knowledge of just what goes on "under the hood" in a Zulip server.  
+**- Tyler: I agree with Michael, this assignment was challenging. Doesn't quite remind me of what I do at work but it was fun getting to play around with a new tool that I had no clue existed. Having the ability to draw up a diagram showing boundaries, processes, datastores,  interactors, and the flows between them and then hitting a button to generate some of the threats that could be found in projects designed in the way we lay it out. Obviously if there are errors in the layout, that will reflect in the threats found whether that's showing a threat that wouldn't be found in a particular data flow or if we don't catch a threat that would be found, it is important to fully understand how to design these diagrams. It also helps further our understanding of just what exactly we are analyzing with this project. Doing this exercise furthers our knowledge of just what goes on "under the hood" in a Zulip server.  
 
-**- Kauser:** I focused on reviewing the models and reports. Even from that vantage point, tracing Zulip's data flows, trust boundaries, and STRIDE findings helped me understand why identifying potential attack vectors and security gaps early matters so much. Reviewing the team's analysis also made it clearer how the earlier diagrams connect to threat modeling and where security improvements are still needed before issues can be exploited.
-
-**- Payten:** I provided the structure of report and started off providing a little understanding of what we were trying to achieve here as a team. I also did the STRIDE analysis, very briefly as what it could intel but specfically thats harder to analyze as we do not know what hypothetical. Lastly I also did some mitigation in terms of redesigning to eliminate, apply standard mitigation, invent new mitigations, and accept vulnerability in design to show you will be to reinvent wheel and take on risk to be successful here. 
+**-Kauser:** I focused on reviewing the models and reports. Even from that vantage point, tracing Zulip's data flows, trust boundaries, and STRIDE findings helped me understand why identifying potential attack vectors and security gaps early matters so much. Reviewing the team's analysis also made it clearer how the earlier diagrams connect to threat modeling and where security improvements are still needed before issues can be exploited.
 
 **2.5: Conclusion**
 
-This assignment showed threat modeling from a perspective of having a current basis from Zulip's existing protections. The Data Flow Diagrams and STRIDE show in terms of messaging, attachments, and push notifications all are effected through different interactions. The tool used to generate the diagrams only included the useful threats that need to be reviewed and understand mitigation strategies. Zulips existing protections: authorization, profile validation, authentication, and audit logging can reduce risk if improved per interaction use. This project helped not only my team but hopefully people who read this that threat modeling is needed within security and depends on elevating current software to be more secure.  
 
