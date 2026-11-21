@@ -16,7 +16,7 @@ For our notifications DFD, we came up with this diagram:
 ![Notifications DFD](images/Notification_DFD.png)  
 **1.3: STRIDE Threat Analysis**
 
-Messaging and Attachments (Zulip sign in --> Messaging/Attachments)
+**Messaging and Attachments (Zulip sign in --> Messaging/Attachments)**
 
 Spoofing
 * The attack could gain stolen credentials, to then act as they are the user that should have legitamite access.
@@ -36,7 +36,7 @@ Denial of Service
 Elevation of Privilige
 * The attacker can try and gain access then get into accounts that can expose other functions.
 
-Notification (Zulip Server --> Push Notification Service)
+**Notification (Zulip Server --> Push Notification Service)**
 
 Spoofing
 * The attacker acts as the Zulip server and then can send any notification that even may be unauthorized.
