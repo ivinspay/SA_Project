@@ -12,9 +12,11 @@ For our notifications DFD, we came up with this diagram:
 ![Notifications DFD](images/Notification_DFD.png)  
 **1.3: STRIDE Threat Analysis**
 
-**1.4: Threat Analysis Details**  
 
-**1.5: Mitigation Strategies**  
+
+
+
+**1.4: Mitigation Strategies**  
  payten  
  
 ***1.5a: AI Statement***  
@@ -69,8 +71,12 @@ Identified in our previous research, one significant gap was the lack of attachm
 **2.3: Team Collaboration**
 
 **2.4: Team Reflection**
-* Michael: This assignment was challenging but not in a bad way. It reminds of what I do at work. Most of my days are spent validating security control and assessing whether an application or system is properly secured.  I have learned a lot about why each step of developing a threat model is Important and why security should be in every aspect of developing a system. I thought the hardest part of this assignment would be drawing the diagram. However, answering the mitigations were challenging for me. It required a lot of analyzing and fact finding. It’s difficult trying to figure out all the possible attack vectors a system may be vulnerable too. Developing a threat model is one way we can bridge the gaps in security in before attackers get the chance to exploit them.  
-* Tyler: I agree with Michael, this assignment was challenging. Doesn't quite remind me of what I do at work but it was fun getting to play around with a new tool that I had no clue existed. Having the ability to draw up a diagram showing boundaries, processes, datastores,  interactors, and the flows between them and then hitting a button to generate some of the threats that could be found in projects designed in the way we lay it out. Obviously if there are errors in the layout, that will reflect in the threats found whether that's showing a threat that wouldn't be found in a particular data flow or if we don't catch a threat that would be found, it is important to fully understand how to design these diagrams. It also helps further our understanding of just what exactly we are analyzing with this project. Doing this exercise furthers our knowledge of just what goes on "under the hood" in a Zulip server.  
+
+**- Michael:** This assignment was challenging but not in a bad way. It reminds of what I do at work. Most of my days are spent validating security control and assessing whether an application or system is properly secured.  I have learned a lot about why each step of developing a threat model is Important and why security should be in every aspect of developing a system. I thought the hardest part of this assignment would be drawing the diagram. However, answering the mitigations were challenging for me. It required a lot of analyzing and fact finding. It’s difficult trying to figure out all the possible attack vectors a system may be vulnerable too. Developing a threat model is one way we can bridge the gaps in security in before attackers get the chance to exploit them.
+
+**- Tamir:** Creating the DFD for Zulip showed me how messages and attachments move between users, the application server, and storage. Trust boundaries are important, especially when sensitive information enters or leaves the server. I used the STRIDE analysis and that help me realize that simple operations, like sending messages or downloading files, can potentially introduce security risks. The most helpful part was being able to connect what we did in previous assignments to the DFDs and see where security still needs to be improved.  
+
+**- Tyler: I agree with Michael, this assignment was challenging. Doesn't quite remind me of what I do at work but it was fun getting to play around with a new tool that I had no clue existed. Having the ability to draw up a diagram showing boundaries, processes, datastores,  interactors, and the flows between them and then hitting a button to generate some of the threats that could be found in projects designed in the way we lay it out. Obviously if there are errors in the layout, that will reflect in the threats found whether that's showing a threat that wouldn't be found in a particular data flow or if we don't catch a threat that would be found, it is important to fully understand how to design these diagrams. It also helps further our understanding of just what exactly we are analyzing with this project. Doing this exercise furthers our knowledge of just what goes on "under the hood" in a Zulip server.  
 **2.5: Conclusion**
 
 
