@@ -36,6 +36,7 @@ Denial of Service
 Elevation of Privilige
 * The attacker can try and gain access then get into accounts that can expose other functions.
 
+
 **Notification (Zulip Server --> Push Notification Service)**
 
 Spoofing
