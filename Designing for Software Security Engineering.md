@@ -20,14 +20,19 @@ For our notifications DFD, we came up with this diagram:
 
 Spoofing
 * The attack could gain stolen credentials, to then act as they are the user that should have legitamite access.
+  
 Tampering 
 * The attack could modify anything that could be in transit when you look at certain requests from messaging.
+  
 Redupdiation
 * Denial of submitting or receiving a message as the user.
+  
 Information Disclosure
 * Anything sensitive could be exposed in terms of message date or leaked credentials.
+  
 Denial of Service
 * Having excessive message requests could overwhelm the front-end of business operations.
+  
 Elevation of Privilige
 * The attacker can try and gain access then get into accounts that can expose other functions.
 
@@ -35,14 +40,19 @@ Elevation of Privilige
 
 Spoofing
 * The attacker acts as the Zulip server and then can send any notification that even may be unauthorized.
+  
 Tampering
 * The notification settings can be modified in transit that can impact notification service itself.
+  
 Repudiation
 * The server cannot dischper if a notifcation was intially sent is logging is not considered in process.
+  
 Information Disclosure
 * Anything confidential can be exposed like other diagram via notification context.
+  
 Denial of Service
 * The large amounts of requests can cause issues or internal problems to push notification service.
+  
 Elevation of Privilige
 * The attacker can abuse the notification system through requests that can trickle to expose unauthorized user and accounts they are trying to acquire. 
 
