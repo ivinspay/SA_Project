@@ -58,7 +58,8 @@ Elevation of Privilige
 
 **1.5: Mitigation Strategies**  
 
-Zulip Server --> Push Notification Service 
+**Zulip Server --> Push Notification Service**
+
 * Redesign to eliminate: Trying to not include sensitive contents when looking at push notifications, the more generic the better.
 * Mitigation Standards: Use Zulips previous controls and add; encryption, input validation, access controls, rate limits.
 * Invent new mitigations: This is risky, but if you invest more in abnormal activity that provide alerts the volume of notification requests could be monitored better.
