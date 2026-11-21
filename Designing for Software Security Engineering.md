@@ -12,9 +12,11 @@ For our notifications DFD, we came up with this diagram:
 ![Notifications DFD](images/Notification_DFD.png)  
 **1.3: STRIDE Threat Analysis**
 
-**1.4: Threat Analysis Details**  
 
-**1.5: Mitigation Strategies**  
+
+
+
+**1.4: Mitigation Strategies**  
  payten  
  
 ***1.5a: AI Statement***  
