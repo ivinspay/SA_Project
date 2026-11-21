@@ -28,7 +28,7 @@ information it was giving me was accurate and covering the point I was looking f
 
  
 **1.6: HTML Reports (link)**
- - [Threat Modeling Report for Zulip Sign-in, Messaging and Attachments](https://htmlpreview.github.io/?https://github.com/SA_Project/blob/main/images/Zulip%20Sign-in%2C%20Messaging%20and%20Attachments.htm)  
+ - [Threat Modeling Report for Zulip Sign-in, Messaging and Attachments](https://htmlpreview.github.io/?https://github.com/loedetyler/SA_Project/blob/main/images/ZulipSign-in.htm)
  - [Threat Modeling Report for Zulip Notifications](https://htmlpreview.github.io/?https://github.com/loedetyler/SA_Project/blob/main/reports/Notification_report_2.htm)   
 
 # Part 2: Observations
