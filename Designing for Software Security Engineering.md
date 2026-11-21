@@ -65,7 +65,7 @@ Elevation of Privilege
   
 * Mitigation Standards: Implement rate limiting to prevent excessive messaging requests and Denial-of-Service attacks,use authentication and authorization protocols to verify user identities and ensure only legitimate users can access messages and attachments, encrypt messages and attachments during transmission using HTTPS/TLS and protect stored information through encryption at rest, maintain audit logs with timestamps and user activity records to help investigate unauthorized modifications or disputed messaging activities.
 
-* Invent new mitigations: Adding step-up verification (such as a multi-factor authentication (MFA),CAPTCHA, or, re-authentication) when accessing sensitive data or high-risk actions could lower credential-stuffing or phishing success, though it adds friction for legitimate users and requires careful tuning to avoid false positives. 
+* Invent new mitigations: Adding step-up verification (such as a multi-factor authentication (MFA) or re-authentication) when accessing sensitive data or high-risk actions could lower credential-stuffing or phishing success, though it adds friction for legitimate users and requires careful tuning to avoid false positives. 
   
 * Accept vulnerability: Messaging disruptions may occur because of network outages, server maintenance, or unexpected service interruptions.Additionally, audit logs cannot completely prevent users from denying their actions, but retain sufficient records to investigate disputes and suspicious activity.
 
