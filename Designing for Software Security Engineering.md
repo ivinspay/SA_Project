@@ -21,6 +21,11 @@ For our notifications DFD, we came up with this diagram:
 On this assignment, there were a handful of mitigations that I got blocked on so I turned to Claude and asked for help searching the documentation for Zulip on the issues I couldn’t find answers to. Having the ability to quickly scan for specific use cases and mitigations 
 was invaluable in this case as it would have taken way too long to scour some for some of the pages that had the answers I was looking for. I had Claude give me a justification for a specific threat and then also provide links to where I could find the answer it provided me. I verified the
 information it was giving me was accurate and covering the point I was looking for before adding it to my TMT report.
+
+* Michael:
+  - Prompt: I asked AI to check if my Zulip diagram followed the DFD examples in the class slides. Then I ask whether the process, data stores, and trust boundaries made sense for my scenario.  I kept asking for examples from Zulip’s code that could ensure that my data flow and interactions were correct. I made sure to manually check the code because the AI made assumption that made no sense or didn’t fit in this context.I then ask AI to help me review and brainstorm mitigations for my threat report. I was helpful, but it made stressful at times. For example, based on what I knew about how Zulip works, I thought a threat should be marked “Mitigation Implemented,” but the AI marked it “Needs Investigation.” I disagreed and we found code showing what Zulip’s audit log recorded and how that addressed the threat. This kind of back and forth happened allot. Despite the struggle in coming to a consensus, AI helped me analyze the code, expanding flesh out my mitigation statements, and check that each one made sense for the threat I was describing. 
+
+
  
 **1.6: HTML Reports (link)**
  - [Threat Modeling Report for Zulip Sign-in, Messaging and Attachments](https://htmlpreview.github.io/?https://github.com/SA_Project/blob/main/images/Zulip%20Sign-in%2C%20Messaging%20and%20Attachments.htm)  
@@ -64,6 +69,7 @@ Identified in our previous research, one significant gap was the lack of attachm
 **2.3: Team Collaboration**
 
 **2.4: Team Reflection**
+* Michael: This assignment was challenging but not in a bad way. It reminds of what I do at work. Most of my days are spent validating security control and assessing whether an application or system is properly secured.  I have learned a lot about why each step of developing a threat model is Important and why security should be in every aspect of developing a system. I thought the hardest part of this assignment would be drawing the diagram. However, answering the mitigations were challenging for me. It required a lot of analyzing and fact finding. It’s difficult trying to figure out all the possible attack vectors a system may be vulnerable too. Developing a threat model is one way we can bridge the gaps in security in before attackers get the chance to exploit them.
 
 **2.5: Conclusion**
 
