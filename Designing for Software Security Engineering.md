@@ -16,6 +16,9 @@ For our notifications DFD, we came up with this diagram:
 ![Notifications DFD](images/Notification_DFD.png)  
 **1.3: STRIDE Threat Analysis**
 
+Spoofing
+* 
+
 **1.4: Threat Analysis Details**  
 
 **1.5: Mitigation Strategies**  
