@@ -46,7 +46,7 @@ Tampering
 * The notification settings can be modified in transit that can impact notification service itself.
 
 Repudiation
-* The server cannot dischper if a notifcation was intially sent is logging is not considered in process.
+* The server cannot decipher if a notifcation was intially sent is logging is not considered in process.
 
 Information Disclosure
 * Anything confidential can be exposed like other diagram via notification context.
@@ -125,8 +125,6 @@ After doing the TMT exercise, for the notification case, there were a lot of Den
 
 Identified in our previous research, one significant gap was the lack of attachment download logging. With detailed download records, administrators could have issues seeing which users accessed files, when downloads occurred, or whether confidential information was leaked. Even though Zulip has controls that help prevent unauthorized access, they can not completely prevent malicious insiders from misusing information they are authorized to access. We believe that improving their auditing and investigative capabilities would help organizations identify potential data exfiltration.
 
-**2.3: Team Collaboration**
-
 **2.4: Team Reflection**
 
 **- Michael:** This assignment was challenging but not in a bad way. It reminds of what I do at work. Most of my days are spent validating security control and assessing whether an application or system is properly secured.  I have learned a lot about why each step of developing a threat model is Important and why security should be in every aspect of developing a system. I thought the hardest part of this assignment would be drawing the diagram. However, answering the mitigations were challenging for me. It required a lot of analyzing and fact finding. It’s difficult trying to figure out all the possible attack vectors a system may be vulnerable too. Developing a threat model is one way we can bridge the gaps in security in before attackers get the chance to exploit them.
@@ -137,6 +135,4 @@ Identified in our previous research, one significant gap was the lack of attachm
 
 **-Kauser:** I focused on reviewing the models and reports. Even from that vantage point, tracing Zulip's data flows, trust boundaries, and STRIDE findings helped me understand why identifying potential attack vectors and security gaps early matters so much. Reviewing the team's analysis also made it clearer how the earlier diagrams connect to threat modeling and where security improvements are still needed before issues can be exploited.
 
-**2.5: Conclusion**
-
-
+**-Payten:** I started the project by providing an outline and explaining more specifically what we were trying to accomplish in project overview. I also did the STRIDE work that helped just explain how each show up in terms of threat modeling. I also examine in terms of per interaction mitigation strategies even though you could provide excess amount to show what could be done. I also showed Zulips existing protections to show what improvements or additions are needed to be made for better security.
