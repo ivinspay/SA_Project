@@ -8,15 +8,17 @@ The course of action to support these scenarios are broken down into structured 
 Then for observations, we will simply look at Zulip's existing protections and any recommendations based on those security gaps. Then lastly we will collaborate on how we went about project and what we concluded from process and what results tell us about our design capabilities. 
 
 **1.2: Data Flow Diagrams (DFDs)**  
+
+Zulip Sign-in, Messaging and Attachments
+![Zulip Sign-in, Messaging and Attachments](images/ZulipSignDFD.png)
+
 For our notifications DFD, we came up with this diagram:  
 ![Notifications DFD](images/Notification_DFD.png)  
 **1.3: STRIDE Threat Analysis**
 
+**1.4: Threat Analysis Details**  
 
-
-
-
-**1.4: Mitigation Strategies**  
+**1.5: Mitigation Strategies**  
  payten  
  
 ***1.5a: AI Statement***  
