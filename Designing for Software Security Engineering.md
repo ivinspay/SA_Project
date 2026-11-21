@@ -57,8 +57,10 @@ Audit Logging
 Source: https://github.com/zulip/zulip/blob/main/zerver/models/realm_audit_logs.py?utm_source=chatgpt.com
 
 **2.2: Security Gaps & Recommendations**  
-After doing the TMT exercise, for the notification case, there were a lot of Denial of Service threats on top of Escalation of Privilege threats that the app found. As far as gaps, most of them were covered in the documentation. There were a few that I put as needs investigation just
- because it relied on configurations set up on the host/server but for default there wasn't much of a gap around the Notification service.
+After doing the TMT exercise, for the notification case, there were a lot of Denial of Service threats on top of Escalation of Privilege threats that the app found. As far as gaps, most of them were covered in the documentation. There were a few that we put as needs investigation just because it relied on configurations set up on the host/server but for default there wasn't much of a gap around the Notification service.
+
+Identified in our previous research, one significant gap was the lack of attachment download logging. With detailed download records, administrators could have issues seeing which users accessed files, when downloads occurred, or whether confidential information was leaked. Even though Zulip has controls that help prevent unauthorized access, they can not completely prevent malicious insiders from misusing information they are authorized to access. We believe that improving their auditing and investigative capabilities would help organizations identify potential data exfiltration.
+
 **2.3: Team Collaboration**
 
 **2.4: Team Reflection**
